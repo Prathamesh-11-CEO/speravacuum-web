@@ -12478,7 +12478,8 @@ html.lenis body {
   z-index: -1;
 }
 .rs-footer-one .rs-footer-widget-logo img {
-  max-width: 180px;
+  width: 250px;
+  height: auto;
 }
 .rs-footer-one .rs-footer-copyright a {
   color: var(--rs-theme-orange);
@@ -28495,6 +28496,49 @@ a.ui-button:active {
 .ui-widget-shadow {
   -webkit-box-shadow: 0 0 5px #666;
   box-shadow: 0 0 5px #666;
+}
+
+/* Certificate logos in footer */
+.certificates-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* increased spacing from footer content above */
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.certificates-container .cert-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+.certificates-container .cert-logos img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 767px) {
+  .certificates-container .cert-logos img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Specific sizing for the startup badge only */
+.certificates-container .cert-logos img.startup-logo {
+  width: 100px;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .certificates-container .cert-logos img.startup-logo {
+    width: 80px;
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
