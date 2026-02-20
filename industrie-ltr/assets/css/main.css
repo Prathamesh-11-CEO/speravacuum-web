@@ -255,6 +255,15 @@ i[class^=icon-] {
   position: relative;
 }
 
+  /* Align service nav button text to left and place icon to the right */
+  .rs-services-tab .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  
 /*----------------------------------------
    Bootstrap customize
 -----------------------------------------*/
