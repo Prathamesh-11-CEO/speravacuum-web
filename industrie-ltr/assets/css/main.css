@@ -20405,8 +20405,19 @@ html.lenis body {
     grid-template-columns: auto;
   }
 }
-.rs-services-details-wrapper .rs-list-item ul li {
+
+/* Scoped single-column list for specific page */
+.rs-services-details-wrapper .rs-list-item .single-column-list {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.rs-services-details-wrapper .rs-list-item .single-column-list li {
   font-size: 16px;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 8px;
 }
 .rs-services-details-wrapper .rs-list-item ul li svg {
   width: 20px;
@@ -20415,6 +20426,37 @@ html.lenis body {
 }
 .rs-services-details-wrapper .rs-list-item ul li:not(:last-child) {
   margin-bottom: 0;
+}
+.rs-services-details-wrapper .rs-services-details-table {
+  margin: 30px 0;
+  overflow-x: auto;
+}
+.rs-services-details-wrapper .rs-services-details-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+.rs-services-details-wrapper .rs-services-details-table table thead {
+  background-color: var(--rs-theme-orange);
+  color: white;
+}
+.rs-services-details-wrapper .rs-services-details-table table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid var(--rs-theme-orange);
+  background-color: var(--rs-theme-orange);
+  color: white;
+}
+.rs-services-details-wrapper .rs-services-details-table table td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+}
+.rs-services-details-wrapper .rs-services-details-table table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.rs-services-details-wrapper .rs-services-details-table table tbody tr:hover {
+  background-color: #f0f0f0;
 }
 .rs-services-details-wrapper .rs-services-details-video {
   min-height: 400px;
