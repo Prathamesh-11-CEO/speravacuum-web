@@ -842,5 +842,81 @@ Sidebar Toggle
             });
     });
 
+    /* ========================================
+       PRODUCT GALLERY FUNCTIONALITY
+       ======================================== */
+
+    // Gallery Thumbnail Click Handler
+    $(document).on('click', '.gallery-thumbnail', function () {
+        // try data-full first, fallback to thumbnail src
+        var fullImageUrl = $(this).attr('data-full') || $(this).attr('src');
+        var $mainImage = $('#mainImage');
+
+        if (!fullImageUrl) {
+            return; // nothing to show
+        }
+
+        // switch image with fade
+        $mainImage.fadeOut(150, function () {
+            $mainImage.attr('src', fullImageUrl).fadeIn(150);
+        });
+
+        // mark active thumbnail
+        $('.gallery-thumbnail').removeClass('active');
+        $(this).addClass('active');
+
+        // scroll thumbnail into view if needed
+        var $thumbnail = $(this);
+        var $track = $('.thumbnail-track');
+
+        if ($track[0].scrollWidth > $track.width()) {
+            var thumbnailOffset = $thumbnail.offset().left - $track.offset().left;
+            var trackScrollLeft = $track.scrollLeft();
+            var trackWidth = $track.width();
+            var thumbnailWidth = $thumbnail.width();
+
+            if (thumbnailOffset < 0) {
+                $track.animate({ scrollLeft: trackScrollLeft + thumbnailOffset - 10 }, 300);
+            } else if (thumbnailOffset + thumbnailWidth > trackWidth) {
+                $track.animate({ scrollLeft: trackScrollLeft + (thumbnailOffset + thumbnailWidth - trackWidth) + 10 }, 300);
+            }
+        } else if ($track[0].scrollHeight > $track.height()) {
+            var thumbnailOffsetTop = $thumbnail.offset().top - $track.offset().top;
+            var trackScrollTop = $track.scrollTop();
+            var trackHeight = $track.height();
+            var thumbnailHeight = $thumbnail.height();
+
+            if (thumbnailOffsetTop < 0) {
+                $track.animate({ scrollTop: trackScrollTop + thumbnailOffsetTop - 10 }, 300);
+            } else if (thumbnailOffsetTop + thumbnailHeight > trackHeight) {
+                $track.animate({ scrollTop: trackScrollTop + (thumbnailOffsetTop + thumbnailHeight - trackHeight) + 10 }, 300);
+            }
+        }
+    });
+
+    // Main Image Click Handler - Open Lightbox
+    $(document).on('click', '.gallery-main', function () {
+        var mainImageSrc = $('#mainImage').attr('src');
+        $('#lightboxImage').attr('src', mainImageSrc);
+        $('#galleryLightbox').addClass('active');
+        $('body').css('overflow', 'hidden');
+    });
+
+    // Lightbox Close Click Handler
+    $(document).on('click', '#lightboxClose, .lightbox-overlay', function (e) {
+        if ($(this).is('#lightboxClose') || $(e.target).is('.lightbox-overlay')) {
+            $('#galleryLightbox').removeClass('active');
+            $('body').css('overflow', 'auto');
+        }
+    });
+
+    // Close Lightbox on Escape Key
+    $(document).on('keydown', function (e) {
+        if (e.keyCode === 27) { // ESC key
+            $('#galleryLightbox').removeClass('active');
+            $('body').css('overflow', 'auto');
+        }
+    });
+
 })(jQuery);
 

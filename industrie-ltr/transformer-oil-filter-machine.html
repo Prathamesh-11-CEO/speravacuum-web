@@ -507,9 +507,47 @@
                 <div class="row g-5">
                     <div class="col-xl-8 col-lg-8">
                         <div class="rs-services-details-wrapper">
-                            <div class="rs-services-details-thumb">
-                                <img src="assets/images/services/transformer-oil-filter-machine-banner.jpeg" alt="image">
+                            <!-- Product Gallery Component -->
+                            <div class="product-gallery">
+                                <!-- Main Image Display -->
+                                <div class="gallery-main">
+                                    <img id="mainImage" src="assets/images/services/transformer-oil-filter-machine-banner.jpeg" alt="Transformer Oil Filter Machine" class="main-image">
+                                    <div class="gallery-zoom-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <path d="m21 21-4.35-4.35"></path>
+                                            <path d="M11 8v6M8 11h6"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Thumbnail Gallery -->
+                                <div class="gallery-thumbnails">
+                                    <div class="thumbnail-track">
+                                        <img src="assets/images/services/transformer-oil-filter-machine-banner.jpeg" alt="Product view 1" class="gallery-thumbnail active" data-full="assets/images/services/transformer-oil-filter-machine-banner.jpeg">
+                                        <img src="assets/images/logo/logo-orange.png" alt="Product view 2" class="gallery-thumbnail" data-full="assets/images/logo/logo-orange.png">
+                                        <img src="assets/images/logo/logo.png" alt="Product view 3" class="gallery-thumbnail" data-full="assets/images/logo/logo.png">
+                                        <img src="assets/images/spera-logo-orange.png" alt="Product view 4" class="gallery-thumbnail" data-full="assets/images/spera-logo-orange.png">
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- Lightbox Modal -->
+                            <div class="gallery-lightbox" id="galleryLightbox">
+                                <div class="lightbox-content">
+                                    <button class="lightbox-close" id="lightboxClose">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </button>
+                                    <div class="lightbox-image-wrapper">
+                                        <img id="lightboxImage" src="" alt="Product lightbox view">
+                                    </div>
+                                </div>
+                                <div class="lightbox-overlay"></div>
+                            </div>
+
                             <h3 class="rs-services-details-title">Transformer Oil Filter Machine</h3>
                             <p class="mb-25 mt-15"><strong></strong></p>
                             <p>Any oil needs to be free from any Impurities to perform at its best. With impurities, it loses its physiochemical 
@@ -518,6 +556,7 @@
 
                                 We at Spera, build high Vacuum filter machines aimed to reduce such impurities at its best with most sophisticated 
                                 design and easy to use Approach.</p>
+                            
                             <h4 class="rs-services-details-title">Features</h4>
                             <p class="mt-20 mb-20"></p>
                             <div class="rs-services-details-feature-list">
@@ -580,6 +619,28 @@
                                     </ul>
                                 </div>
                             </div>
+                            
+                            <div class="rs-services-details-video rs-video-one">
+                                <div class="rs-video-bg-thumb" data-background="assets/images/bg/video-bg-06.png">
+                                </div>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-7 col-lg-8 col-md-10">
+                                            <div class="rs-video-content text-center">
+                                                <div class="rs-video-play-btn">
+                                                    <a href="https://www.youtube.com/watch?v=go7QYaQR494"
+                                                        class="rs-play-btn popup-video"><i
+                                                            class="fa-duotone fa-play"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mb-20"> A demonstration video for the Transformer Oil Filter Machine.</p>
+
+                            <!--  parameters table here   -->
+                            <h6>&nbsp;</h6>
                             <h4 class="rs-services-details-title mt-30 mb-20">Filtration Parameters</h4>
                             <div class="rs-services-details-table">
                                 <table class="table">
@@ -619,35 +680,43 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="rs-services-details-video rs-video-one">
-                                <div class="rs-video-bg-thumb" data-background="assets/images/bg/video-bg-06.png">
-                                </div>
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-7 col-lg-8 col-md-10">
-                                            <div class="rs-video-content text-center">
-                                                <div class="rs-video-play-btn">
-                                                    <a href="https://www.youtube.com/watch?v=go7QYaQR494"
-                                                        class="rs-play-btn popup-video"><i
-                                                            class="fa-duotone fa-play"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <!--Applications-->
+                            <h4 class="rs-services-details-title">Applications</h4>
+                            <p class="mt-20 mb-20"></p>
+                            <div class="rs-services-details-feature-list">
+                                <div class="rs-list-item has-theme-orange">
+                                    <ol class="single-column-list applications-list">
+                                        <li>
+                                            <div class="app-list-badge">1</div>
+                                            <span class="app-list-text">We manufacture machine ranging from 200 LPH to 18000 LPH Machine.</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">2</div>
+                                            <span class="app-list-text">Imported Pumps and High-quality Filters</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">3</div>
+                                            <span class="app-list-text">Digital Temperature monitoring and controlling</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">4</div>
+                                            <span class="app-list-text">Single to three stage Degassing chambers</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">5</div>
+                                            <span class="app-list-text">Semi-Automatic to Fully Automatic Machines with HMI.</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">6</div>
+                                            <span class="app-list-text">Audio (Buzzer) / Visual warnings and process annunciation systems</span>
+                                        </li>
+                                    </ol>
                                 </div>
                             </div>
-                            <p class="mb-20"> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                praesentium
-                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                occaecati
-                                cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.
-                            </p>
 
-                            <!--  Insert table here   -->
 
-                            <!---->
-
-                            <h3 class="rs-services-details-title mb-15">Planning &amp; Strategy</h3>
+                            <!-- <h3 class="rs-services-details-title mb-15">Applications</h3>applications list  numerical add 
                             <p class="mb-55">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                                 praesentium voluptatum
                                 deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
@@ -661,13 +730,16 @@
                                 <div class="rs-services-details-chart">
                                     <canvas id="pie-chart"></canvas>
                                 </div>
-                            </div>
-                            <div class="has-border-line"></div>
+                            </div> -->
+
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
                             <h3 class="rs-services-details-title mb-20">Questions? You’re covered</h3>
-                            <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            <!-- <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
                                 voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
                                 occaecati
-                                cupiditate. </p>
+                                cupiditate. </p> -->
                             <div class="rs-services-details-faq">
                                 <div class="rs-faq-content rs-accordion-one">
                                     <div class="accordion-wrapper">
@@ -677,18 +749,15 @@
                                                     <button class="accordion-button" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                         aria-expanded="true" aria-controls="collapseOne">
-                                                        01. Why is sand important for industry?
+                                                        01. What is a Transformer Oil Filter Machine used for?
                                                         <span class="accordion-btn"></span>
                                                     </button>
                                                 </h4>
                                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                                     data-bs-parent="#accordionExampleOne">
-                                                    <div class="accordion-body"> Randomised words which don’t look even
-                                                        slightly
-                                                        believable. If you are going to use a passage of Lorem Ipsum,
-                                                        you need to be
-                                                        sure
-                                                        there isn’t anything.
+                                                    <div class="accordion-body">A Transformer Oil Filter Machine is used to remove moisture, 
+                                                        dissolved gases, dirt particles, and other impurities from transformer oil. This improves 
+                                                        the oil’s insulation properties and increases the efficiency and life of transformers.
                                                     </div>
                                                 </div>
                                             </div>
@@ -697,18 +766,15 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                         aria-expanded="false" aria-controls="collapseTwo">
-                                                        02. Can I switch to a different plan?
+                                                        02. How does a Transformer Oil Filter Machine improve oil quality?
                                                         <span class="accordion-btn"></span>
                                                     </button>
                                                 </h6>
                                                 <div id="collapseTwo" class="accordion-collapse collapse"
                                                     data-bs-parent="#accordionExampleOne">
-                                                    <div class="accordion-body">Randomised words which don’t look even
-                                                        slightly
-                                                        believable. If you are going to use a passage of Lorem Ipsum,
-                                                        you need to be
-                                                        sure
-                                                        there isn’t anything.</div>
+                                                    <div class="accordion-body">The machine uses high-vacuum filtration, heating, and degassing 
+                                                        processes to remove contaminants. It increases Breakdown Voltage (BDV), reduces moisture 
+                                                        content, and removes gases and particles from the oil.</div>
                                                 </div>
                                             </div>
                                             <div class="rs-accordion-item">
@@ -716,93 +782,68 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                         aria-expanded="false" aria-controls="collapseThree">
-                                                        03. What should I wear for an industry treatment?
+                                                        03. Can used transformer oil be reused after filtration?
                                                         <span class="accordion-btn"></span>
                                                     </button>
                                                 </h6>
                                                 <div id="collapseThree" class="accordion-collapse collapse"
                                                     data-bs-parent="#accordionExampleOne">
-                                                    <div class="accordion-body">Randomised words which don’t look even
-                                                        slightly
-                                                        believable. If you are going to use a passage of Lorem Ipsum,
-                                                        you need to be
-                                                        sure
-                                                        there isn’t anything.</div>
+                                                    <div class="accordion-body">Yes, used transformer oil can be safely reused after filtration. 
+                                                        The filtration process restores the oil’s insulating properties, making it suitable for 
+                                                        continued use in transformers.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rs-accordion-item">
+                                                <h6 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                        aria-expanded="false" aria-controls="collapseFour">
+                                                        04. What capacity Transformer Oil Filter Machines are available?
+                                                        <span class="accordion-btn"></span>
+                                                    </button>
+                                                </h6>
+                                                <div id="collapseFour" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body">Transformer Oil Filter Machines are available in various capacities 
+                                                        ranging from 200 LPH to 18,000 LPH, suitable for small distribution transformers as well as large 
+                                                        power transformers.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="rs-services-details-cta">
-                                <div class="rs-services-details-cta-bg-thumb"
-                                    data-background="assets/images/bg/cta-bg-08.png">
-                                </div>
-                                <div class="rs-services-details-cta-content">
-                                    <h3 class="rs-services-details-title mb-40">We are always ready to help you and
-                                        answer your
-                                        questions</h3>
-                                    <div class="rs-services-details-btn">
-                                        <a class="rs-btn has-theme-orange has-icon has-bg" href="contact.html">Explore
-                                            More
-                                            <span class="icon-box">
-                                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                    </path>
-                                                </svg>
-                                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 32 32">
-                                                    <path
-                                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                                    </path>
-                                                </svg>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="rs-services-details-cta-thumb">
-                                    <img src="assets/images/services/details/services-details-02.png" alt="image">
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4">
                         <div class="rs-sidebar-wrapper rs-sidebar-sticky">
                             <div class="sidebar-widget widget-categories-two has-content-none mb-30">
-                                <h5 class="mb-25 sidebar-widget-title">Our Services</h5>
+                                <h5 class="mb-25 sidebar-widget-title">Product Categories</h5>
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            Bridge Construction
+                                            Oil Treatment Systems
                                             <i class="ri-arrow-right-line"></i></a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            High regulation industry
+                                            Drying Systems
                                             <i class="ri-arrow-right-line"></i></a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            Industrial Construction
+                                            Impregnation Systems
                                             <i class="ri-arrow-right-line"></i></a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            Mechanical Engineering
+                                            Oil Handling Systems
                                             <i class="ri-arrow-right-line"></i></a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Oil &amp; Gas Energy
-                                            <i class="ri-arrow-right-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Manufacturing solutions
-                                            <i class="ri-arrow-right-line"></i></a>
-                                    </li>
+
                                 </ul>
                             </div>
                             <div class="sidebar-widget widget-cta mb-30">
