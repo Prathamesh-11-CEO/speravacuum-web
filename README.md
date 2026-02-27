@@ -43,7 +43,7 @@ No build step required — this is a static HTML template ready to use.
 industrie-ltr/
 ├── index.html              # Homepage
 ├── about.html              # About page
-├── services.html           # Services page
+├── products.html           # Services page
 ├── portfolio.html          # Portfolio page
 ├── team.html               # Team page
 ├── blog.html               # Blog page
