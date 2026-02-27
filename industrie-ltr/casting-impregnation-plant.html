@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="template-version" content="1.0.5">
-    <title>Pricing || HTML Template</title>
+    <title>Casting Impregnation Plant</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -22,6 +22,70 @@
     <link rel="stylesheet" href="assets/css/vendor/spacing.css">
     <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* ── Spera Product Image Gallery ── */
+        .spera-product-gallery {
+            display: flex;
+            gap: 0;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            background: #fff;
+        }
+        .spera-gallery-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 10px;
+            background: #f5f5f5;
+            width: 96px;
+            min-width: 96px;
+            border-right: 1px solid #e0e0e0;
+        }
+        .spera-gallery-thumb {
+            width: 76px;
+            height: 76px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
+            opacity: 0.65;
+            display: block;
+        }
+        .spera-gallery-thumb:hover {
+            opacity: 0.9;
+            transform: scale(1.04);
+        }
+        .spera-gallery-thumb.active {
+            border-color: #e07a3e;
+            opacity: 1;
+            box-shadow: 0 0 0 1px #e07a3e;
+        }
+        .spera-gallery-main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            min-height: 420px;
+            overflow: hidden;
+            position: relative;
+        }
+        .spera-gallery-main img {
+            width: 100%;
+            height: 100%;
+            max-height: 460px;
+            object-fit: contain;
+            transition: opacity 0.22s ease;
+            display: block;
+        }
+        .spera-gallery-main img.spera-fade-out {
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body class="rs-smoother-yes rtl">
@@ -425,13 +489,14 @@
                     <div class="col-xxl-6 col-xl-8 col-lg-8">
                         <div class="rs-breadcrumb-content-wrapper">
                             <div class="rs-breadcrumb-title-wrapper">
-                                <h1 class="rs-breadcrumb-title">Pricing</h1>
+                                <h1 class="rs-breadcrumb-title">Casting Impregnation Plant</h1>
                             </div>
                             <div class="rs-breadcrumb-menu">
                                 <nav>
                                     <ul>
-                                        <li><span><a href="index.html">Industrie</a></span></li>
-                                        <li><span>Pricing</span></li>
+                                        <li><span><a href="index.html">Spera Vacuum</a></span></li>
+                                        <li><span>Products</span></li>
+                                        <li><span>Casting Impregnation Plant</span></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -442,275 +507,417 @@
         </section>
         <!-- breadcrumb area end -->
 
-        <!-- pricing area start -->
-        <section class="rs-pricing-area section-space rs-pricing-two">
+        <!-- Casting Impregnation Plant area start -->
+        <section class="rs-services-area section-space ">
             <div class="container">
-                <div class="row  g-5 justify-content-center">
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="rs-pricing-tab-wrapper text-center">
-                            <div class="rs-pricing-tab-inner">
-                                <div class="rs-pricing-tab">
-                                    <button class="monthly-plan-btn active" type="button">Monthly Plan</button>
+                <div class="row g-5">
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="rs-services-details-wrapper">
+                            <!-- Product Image Gallery -->
+                            <div class="spera-product-gallery">
+                                <!-- Left thumbnail sidebar -->
+                                <div class="spera-gallery-sidebar">
+                                    <img class="spera-gallery-thumb active"
+                                         src="assets/images/services/casting-impregnation-plant.jpeg"
+                                         alt="Casting Impregnation Plant – view 1"
+                                         data-full="assets/images/services/casting-impregnation-plant.jpeg">
+                                    <img class="spera-gallery-thumb"
+                                         src="assets/images/services/casting-impregnation-plant.jpeg"
+                                         alt="Casting Impregnation Plant – view 2"
+                                         data-full="assets/images/services/casting-impregnation-plant.jpeg">
+                                    <img class="spera-gallery-thumb"
+                                         src="assets/images/services/casting-impregnation-plant.jpeg"
+                                         alt="Casting Impregnation Plant – view 3"
+                                         data-full="assets/images/services/casting-impregnation-plant.jpeg">
                                 </div>
-                                <div class="rs-pricing-tab">
-                                    <button class="yearly-plan-btn" type="button">Yearly Plan</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rs-pricing-wrapper monthly-pricing">
-                    <div class="row g-5">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="rs-pricing-item">
-                                <div class="rs-pricing-content">
-                                    <div class="rs-pricing-top">
-                                        <h4 class="rs-pricing-title">Basic Plan</h4>
-                                        <p class="description">What you will get in this plan !!</p>
-                                    </div>
-                                    <div class="rs-pricing-bottom">
-                                        <h2 class="rs-pricing-amount">$29.00</h2>
-                                        <span class="rs-pricing-duration">Monthly</span>
-                                        <p class="description">This plan includes online consultation options for all
-                                            users</p>
-                                    </div>
-                                </div>
-                                <div class="rs-pricing-feature">
-                                    <ul>
-                                        <li>Prepare Documentation</li>
-                                        <li>Brand Consistency</li>
-                                        <li class="close">Quality Control System</li>
-                                        <li class="close">International Business</li>
-                                        <li class="close">Professional Support</li>
-                                    </ul>
-                                </div>
-                                <div class="rs-pricing-btn">
-                                    <a class="rs-btn w-100 has-bg-transparent" href="contact.html">Get Start Now
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </a>
+                                <!-- Main image display -->
+                                <div class="spera-gallery-main">
+                                    <img id="speraMainImage"
+                                         src="assets/images/services/casting-impregnation-plant.jpeg"
+                                         alt="Casting Impregnation Plant">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="rs-pricing-item item-active">
-                                <div class="rs-pricing-bg-thumb" data-background="assets/images/bg/pricing-bg-02.png">
-                                </div>
-                                <span class="rs-pricing-tag">Most Popular</span>
-                                <div class="rs-pricing-content">
-                                    <div class="rs-pricing-top">
-                                        <h4 class="rs-pricing-title">Commercial</h4>
-                                        <p class="description">What you will get in this plan !!</p>
-                                    </div>
-                                    <div class="rs-pricing-bottom">
-                                        <h2 class="rs-pricing-amount">$59.00</h2>
-                                        <span class="rs-pricing-duration">Monthly</span>
-                                        <p class="description">This plan includes online consultation options for all
-                                            users</p>
-                                    </div>
-                                </div>
-                                <div class="rs-pricing-feature">
-                                    <ul>
-                                        <li>Prepare Documentation</li>
-                                        <li>Brand Consistency</li>
-                                        <li>Quality Control System</li>
-                                        <li class="close">International Business</li>
-                                        <li class="close">Professional Support</li>
-                                    </ul>
-                                </div>
-                                <div class="rs-pricing-btn">
-                                    <a class="rs-btn w-100 has-bg-transparent" href="contact.html">Get Start Now
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="rs-pricing-item">
-                                <div class="rs-pricing-content">
-                                    <div class="rs-pricing-top">
-                                        <h4 class="rs-pricing-title">Enterprise</h4>
-                                        <p class="description">What you will get in this plan !!</p>
-                                    </div>
-                                    <div class="rs-pricing-bottom">
-                                        <h2 class="rs-pricing-amount">$89.00</h2>
-                                        <span class="rs-pricing-duration">Monthly</span>
-                                        <p class="description">This plan includes online consultation options for all
-                                            users</p>
-                                    </div>
-                                </div>
-                                <div class="rs-pricing-feature">
-                                    <ul>
-                                        <li>Prepare Documentation</li>
-                                        <li>Brand Consistency</li>
-                                        <li>Quality Control System</li>
-                                        <li>International Business</li>
-                                        <li class="close">Professional Support</li>
-                                    </ul>
-                                </div>
-                                <div class="rs-pricing-btn">
-                                    <a class="rs-btn w-100 has-bg-transparent" href="contact.html">Get Start Now
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rs-pricing-wrapper yearly-pricing">
-                    <div class="row g-5">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="rs-pricing-item">
-                                <div class="rs-pricing-content">
-                                    <div class="rs-pricing-top">
-                                        <h4 class="rs-pricing-title">Basic Plan</h4>
-                                        <p class="description">What you will get in this plan !!</p>
-                                    </div>
-                                    <div class="rs-pricing-bottom">
-                                        <h2 class="rs-pricing-amount">$49.00</h2>
-                                        <span class="rs-pricing-duration">Monthly</span>
-                                        <p class="description">This plan includes online consultation options for all
-                                            users</p>
-                                    </div>
-                                </div>
-                                <div class="rs-pricing-feature">
-                                    <ul>
-                                        <li>Prepare Documentation</li>
-                                        <li>Brand Consistency</li>
-                                        <li class="close">Quality Control System</li>
-                                        <li class="close">International Business</li>
-                                        <li class="close">Professional Support</li>
-                                    </ul>
-                                </div>
-                                <div class="rs-pricing-btn">
-                                    <a class="rs-btn w-100 has-bg-transparent" href="contact.html">Get Start Now
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="rs-pricing-item item-active">
-                                <div class="rs-pricing-bg-thumb" data-background="assets/images/bg/pricing-bg-02.png">
-                                </div>
-                                <span class="rs-pricing-tag">Most Popular</span>
-                                <div class="rs-pricing-content">
-                                    <div class="rs-pricing-top">
-                                        <h4 class="rs-pricing-title">Commercial</h4>
-                                        <p class="description">What you will get in this plan !!</p>
-                                    </div>
-                                    <div class="rs-pricing-bottom">
-                                        <h2 class="rs-pricing-amount">$69.00</h2>
-                                        <span class="rs-pricing-duration">Monthly</span>
-                                        <p class="description">This plan includes online consultation options for all
-                                            users</p>
-                                    </div>
-                                </div>
-                                <div class="rs-pricing-feature">
-                                    <ul>
-                                        <li>Prepare Documentation</li>
-                                        <li>Brand Consistency</li>
-                                        <li>Quality Control System</li>
-                                        <li class="close">International Business</li>
-                                        <li class="close">Professional Support</li>
-                                    </ul>
-                                </div>
-                                <div class="rs-pricing-btn">
-                                    <a class="rs-btn w-100 has-bg-transparent" href="contact.html">Get Start Now
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="rs-pricing-item">
-                                <div class="rs-pricing-content">
-                                    <div class="rs-pricing-top">
-                                        <h4 class="rs-pricing-title">Enterprise</h4>
-                                        <p class="description">What you will get in this plan !!</p>
-                                    </div>
-                                    <div class="rs-pricing-bottom">
-                                        <h2 class="rs-pricing-amount">$99.00</h2>
-                                        <span class="rs-pricing-duration">Monthly</span>
-                                        <p class="description">This plan includes online consultation options for all
-                                            users</p>
-                                    </div>
-                                </div>
-                                <div class="rs-pricing-feature">
-                                    <ul>
-                                        <li>Prepare Documentation</li>
-                                        <li>Brand Consistency</li>
-                                        <li>Quality Control System</li>
-                                        <li>International Business</li>
-                                        <li class="close">Professional Support</li>
-                                    </ul>
-                                </div>
-                                <div class="rs-pricing-btn">
-                                    <a class="rs-btn w-100 has-bg-transparent" href="contact.html">Get Start Now
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- pricing area end -->
 
-        <!-- cta area start -->
-        <section class="rs-cta-area rs-cta-six section-space-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="rs-cta-wrapper">
-                            <h3 class="rs-cta-title">We are always ready to help you and answer your questions </h3>
-                            <div class="rs-cta-btn">
-                                <a class="rs-btn has-theme-orange has-icon has-black has-bg" href="contact.html">Contact
-                                    With Us
-                                    <span class="icon-box">
-                                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                        <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                            <path
-                                                d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                </a>
+                            <h3 class="rs-services-details-title">Casting Impregnation Plant</h3>
+                            <p class="mb-25 mt-15"><strong></strong></p>
+                            <p>Porosity occurs in cast components due to solidification shrinkage or gas formation during manufacturing. These microscopic voids create leak paths which make pressure-tight or fluid-tight components unusable.
+
+Casting Impregnation is a porosity sealing process that removes trapped air from casting voids and fills them with a chemically and thermally resistant polymer sealant.
+
+The impregnation process can be integrated within the production facility or installed in-line with manufacturing operations to improve product quality and reduce rejection rates.</p>
+                            
+                            <h4 class="rs-services-details-title">Features</h4>
+                            <p class="mt-20 mb-20"></p>
+                            <div class="rs-services-details-feature-list">
+                                <div class="rs-list-item has-theme-orange">
+                                    <ul class="single-column-list">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Complete vacuum impregnation system
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Effective sealing of casting porosity
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Chemically resistant polymer sealants
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Vacuum and pressure impregnation cycles
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Automatic sealant recovery system
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            High production efficiency
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Reduced rejection of cast components
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Suitable for inline production integration
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="rs-services-details-video rs-video-one">
+                                <div class="rs-video-bg-thumb" data-background="assets/images/bg/video-bg-06.png">
+                                </div>
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-7 col-lg-8 col-md-10">
+                                            <div class="rs-video-content text-center">
+                                                <div class="rs-video-play-btn">
+                                                    <a href="https://www.youtube.com/watch?v=go7QYaQR494"
+                                                        class="rs-play-btn popup-video"><i
+                                                            class="fa-duotone fa-play"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mb-20"> A demonstration video for the Casting Impregnation Plant.</p>
+
+                            <!--  Impregnation Process section   -->
+                            <h6>&nbsp;</h6>
+                            <h4 class="rs-services-details-title mt-30 mb-20">Impregnation Process</h4>
+                            <p class="mb-20">The casting impregnation process consists of four main stages:</p>
+                            <div class="rs-services-details-feature-list">
+                                <div class="rs-list-item has-theme-orange">
+                                    <ul class="single-column-list">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Impregnation – Vacuum removes trapped air from porosity and sealant penetrates the voids.
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Draining – Excess sealant is drained and returned to the storage tank.
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Cold Wash – Components are washed to remove surface sealant.
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor">
+                                                <path
+                                                    d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z">
+                                                </path>
+                                            </svg>
+                                            Hot Wash – Heat polymerizes the sealant and permanently seals the porosity.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <!--Applications-->
+                            <h4 class="rs-services-details-title">Applications</h4>
+                            <p class="mt-20 mb-20"></p>
+                            <div class="rs-services-details-feature-list">
+                                <div class="rs-list-item has-theme-orange">
+                                    <ol class="single-column-list applications-list">
+                                        <li>
+                                            <div class="app-list-badge">1</div>
+                                            <span class="app-list-text">Sealing porosity in aluminum castings</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">2</div>
+                                            <span class="app-list-text">Sealing porosity in cast iron components</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">3</div>
+                                            <span class="app-list-text">Leak-proofing automotive components</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">4</div>
+                                            <span class="app-list-text">Sealing hydraulic and pneumatic parts</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">5</div>
+                                            <span class="app-list-text">Manufacturing of pressure-tight castings</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">6</div>
+                                            <span class="app-list-text">Compressor and pump components</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">7</div>
+                                            <span class="app-list-text">Automotive engine and gearbox castings</span>
+                                        </li>
+                                        <li>
+                                            <div class="app-list-badge">8</div>
+                                            <span class="app-list-text">Die-cast component manufacturing</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+
+                            <!-- <h3 class="rs-services-details-title mb-15">Applications</h3>applications list  numerical add 
+                            <p class="mb-55">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                praesentium voluptatum
+                                deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                                cupiditate. </p>
+                            <h3 class="rs-services-details-title mb-15">Stats &amp; Charts</h3>
+                            <div class="rs-services-details-chart-wrapper">
+                                <p class="mb-0"> At vero eos et accusamus et iusto odio digmos ducimus qui blanditiis
+                                    praesentium voluptatum
+                                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati .
+                                </p>
+                                <div class="rs-services-details-chart">
+                                    <canvas id="pie-chart"></canvas>
+                                </div>
+                            </div> -->
+
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+                            <h3 class="rs-services-details-title mb-20">Questions? You’re covered</h3>
+                            <!-- <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                occaecati
+                                cupiditate. </p> -->
+                            <div class="rs-services-details-faq">
+                                <div class="rs-faq-content rs-accordion-one">
+                                    <div class="accordion-wrapper">
+                                        <div class="accordion" id="accordionExampleOne">
+                                            <div class="rs-accordion-item">
+                                                <h4 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        01. What is a Casting Impregnation Plant used for?
+                                                        <span class="accordion-btn"></span>
+                                                    </button>
+                                                </h4>
+                                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                                    data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body">A Casting Impregnation Plant is used to seal microscopic porosity in metal castings. The process fills internal voids with polymer sealant to make components pressure-tight and leak-free. 
+                                                        dissolved gases, dirt particles, and other impurities from transformer oil. This improves 
+                                                        the oil’s insulation properties and increases the efficiency and life of transformers.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rs-accordion-item">
+                                                <h6 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                        aria-expanded="false" aria-controls="collapseTwo">
+                                                        02. Why is casting impregnation necessary?
+                                                        <span class="accordion-btn"></span>
+                                                    </button>
+                                                </h6>
+                                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body">During casting, shrinkage and gas formation create small pores inside metal parts. These pores can cause leakage in pressure or fluid applications. Impregnation seals these pores and improves product reliability.</div>
+                                                </div>
+                                            </div>
+                                            <div class="rs-accordion-item">
+                                                <h6 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                        aria-expanded="false" aria-controls="collapseThree">
+                                                        03. Which materials can be impregnated?
+                                                        <span class="accordion-btn"></span>
+                                                    </button>
+                                                </h6>
+                                                <div id="collapseThree" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body">Casting impregnation is commonly used for aluminum castings, cast iron parts, and die-cast components used in automotive, hydraulic, and industrial equipment. 
+                                                        The filtration process restores the oil’s insulating properties, making it suitable for 
+                                                        continued use in transformers.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rs-accordion-item">
+                                                <h6 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                        aria-expanded="false" aria-controls="collapseFour">
+                                                        04. Can impregnation be integrated into production?
+                                                        <span class="accordion-btn"></span>
+                                                    </button>
+                                                </h6>
+                                                <div id="collapseFour" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExampleOne">
+                                                    <div class="accordion-body">Yes, Casting Impregnation Plants can be installed as standalone systems or integrated directly into production lines for continuous processing of cast components.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <div class="rs-sidebar-wrapper rs-sidebar-sticky">
+                            <div class="sidebar-widget widget-categories-two has-content-none mb-30">
+                                <h5 class="mb-25 sidebar-widget-title">Product Categories</h5>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Oil Treatment Systems
+                                            <i class="ri-arrow-right-line"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Drying Systems
+                                            <i class="ri-arrow-right-line"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Impregnation Systems
+                                            <i class="ri-arrow-right-line"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Oil Handling Systems
+                                            <i class="ri-arrow-right-line"></i></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="sidebar-widget widget-cta mb-30">
+                                <div class="sidebar-widget-cta-thumb" data-background="assets/images/bg/cta-bg-09.png">
+                                </div>
+                                <div class="sidebar-widget-content">
+                                    <h3 class="sidebar-widget-title has-large has-border">Have a <br> project in <br>
+                                        mind?</h3>
+                                    <div class="sidebar-widget-btn">
+                                        <a class="rs-btn has-theme-orange has-icon has-bg" href="contact.html">Let’s
+                                            Talk
+                                            <span class="icon-box">
+                                                <svg class="icon-first" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 32 32">
+                                                    <path
+                                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
+                                                    </path>
+                                                </svg>
+                                                <svg class="icon-second" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 32 32">
+                                                    <path
+                                                        d="M31.71,15.29l-10-10L20.29,6.71,28.59,15H0v2H28.59l-8.29,8.29,1.41,1.41,10-10A1,1,0,0,0,31.71,15.29Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget widget-download mb-30">
+                                <h5 class="mb-25 sidebar-widget-title">Download Brochures</h5>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="left">
+                                                <span><img src="assets/images/icon/docs.svg" alt="#"></span>
+                                                Report 2023-24
+                                            </div>
+                                            <span><img src="assets/images/icon/download-01.svg" alt="#"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="left">
+                                                <span><img src="assets/images/icon/pdf.svg" alt="#"></span>
+                                                Download PDF
+                                            </div>
+                                            <span><img src="assets/images/icon/download-02.svg" alt="#"></span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- cta area end -->
+        <!-- Casting Impregnation Plant area end -->
         <!-- contact area start -->
         <section class="rs-contact-area rs-contact-one section-space black-bg p-relative">
             <div class="rs-contact-bg" data-background="assets/images/bg/contact-bg-01.png">
@@ -961,7 +1168,6 @@
     </footer>
     <!-- footer area end -->
 
-
     <!-- back to top -->
     <!-- Backtotop start -->
     <div class="backtotop-wrap cursor-pointer">
@@ -1000,6 +1206,28 @@
     <script src="assets/js/vendor/purecounter.js"></script>
     <script src="assets/js/vendor/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var thumbs = document.querySelectorAll('.spera-gallery-thumb');
+            var mainImg = document.getElementById('speraMainImage');
+            if (!mainImg) return;
+            thumbs.forEach(function (thumb) {
+                thumb.addEventListener('click', function () {
+                    if (thumb.classList.contains('active')) return;
+                    thumbs.forEach(function (t) { t.classList.remove('active'); });
+                    thumb.classList.add('active');
+                    mainImg.classList.add('spera-fade-out');
+                    var newSrc = thumb.getAttribute('data-full');
+                    var newAlt = thumb.getAttribute('alt');
+                    setTimeout(function () {
+                        mainImg.src = newSrc;
+                        mainImg.alt = newAlt;
+                        mainImg.classList.remove('spera-fade-out');
+                    }, 200);
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>
