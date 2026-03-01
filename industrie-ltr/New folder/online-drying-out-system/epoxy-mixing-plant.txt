@@ -1,0 +1,51 @@
+## Epoxy Mixing Plant
+
+The Epoxy Mixing Plant is designed for precise mixing and degassing of epoxy resin systems used in electrical insulation and transformer manufacturing. Proper mixing of epoxy resin with hardeners, fillers, and additives is essential to achieve high dielectric strength and mechanical stability in electrical components. 
+
+Spera Epoxy Mixing Plants provide controlled heating, accurate proportioning, and high-vacuum degassing to ensure homogeneous and bubble-free epoxy mixtures. The system delivers consistent mixing quality and reliable performance for manufacturing dry-type transformers, bushings, insulators, and other electrical products. 
+
+---
+
+### Features
+
+High vacuum mixing and degassing system
+Precision dosing and proportioning of resin and hardener
+Digital temperature monitoring and control
+Heating system for viscosity control
+Homogeneous mixing with efficient agitator design
+Vacuum mixing chamber for bubble-free resin
+Semi-Automatic to Fully Automatic operation with PLC/HMI
+Stable and reliable performance
+Easy operation and low maintenance
+A demonstration video for the Epoxy Mixing Plant.
+
+---
+
+### Applications
+
+Epoxy resin mixing for dry-type transformers
+Manufacturing of transformer coils and windings
+Production of cast resin transformers
+Epoxy mixing for CT/PT and electrical components
+Manufacturing of high-voltage insulators and bushings
+Vacuum degassing of epoxy resin systems
+Electrical insulation manufacturing
+Transformer manufacturing plants
+
+---
+
+### Questions? You’re covered
+
+**01. What is an Epoxy Mixing Plant used for?**
+An Epoxy Mixing Plant is used to mix epoxy resin with hardeners and additives in controlled conditions. The system ensures uniform mixing and removes air bubbles to produce high-quality insulation materials.
+
+**02. Why is vacuum mixing required for epoxy resin?**
+Vacuum mixing removes trapped air and moisture from the resin mixture. This ensures bubble-free casting and improves electrical insulation and mechanical strength.
+
+**03. What materials can be processed in an Epoxy Mixing Plant?**
+The plant can process epoxy resin, hardeners, fillers, pigments, and additives used in transformer insulation and electrical components.
+
+**04. Is the Epoxy Mixing Plant suitable for transformer manufacturing?**
+Yes, the Epoxy Mixing Plant is widely used in dry-type transformer manufacturing for preparing epoxy resin mixtures used in coil casting and insulation systems.
+
+---

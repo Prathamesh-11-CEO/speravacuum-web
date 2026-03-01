@@ -1,0 +1,59 @@
+## Oil Handling System
+
+The Oil Handling System is designed for safe storage, transfer, and controlled delivery of transformer insulating oil during transformer manufacturing and maintenance. Proper handling of transformer oil is essential to prevent contamination and maintain its insulating and cooling properties, which are critical for reliable transformer operation. 
+
+Spera Oil Handling Systems provide efficient oil transfer, storage, and circulation using high-quality pumps, valves, and filtration accessories. The system ensures clean and controlled oil movement between storage tanks, filtration units, and transformers with safe and reliable operation. 
+
+---
+
+### Features
+
+Heavy-duty oil transfer pumps
+Storage and transfer tank arrangements
+Efficient oil circulation system
+High-quality valves and piping system
+Inline strainers and filters
+Digital flow monitoring (optional)
+Compact and easy-to-operate design
+Stable and reliable performance
+Semi-Automatic to Fully Automatic operation with PLC/HMI
+Easy maintenance and long service life
+
+A demonstration video for the Oil Handling System.
+
+---
+
+### Applications
+
+Transfer of transformer oil between tanks and transformers
+
+Oil storage and distribution systems
+
+Transformer manufacturing plants
+
+Transformer repair and servicing workshops
+
+Oil circulation during filtration and filling
+
+Electrical substations and utility maintenance
+
+Safe handling of new and used transformer oil
+
+Bulk oil transfer operations
+
+---
+
+### Questions? You’re covered
+
+**01. What is an Oil Handling System used for?**
+An Oil Handling System is used for storing, transferring, and circulating transformer oil between storage tanks, filtration units, and transformers in a safe and controlled manner.
+
+**02. What components are included in an Oil Handling System?**
+An Oil Handling System typically includes transfer pumps, storage tanks, valves, pipelines, filters, and control panels for efficient oil movement. ([NACH Engineering][2])
+
+**03. Why is proper oil handling important?**
+Proper oil handling prevents contamination and moisture entry, helping maintain the insulating and cooling properties of transformer oil. ([LinkedIn][1])
+
+**04. Is the Oil Handling System suitable for transformer maintenance?**
+Yes, Oil Handling Systems are widely used in transformer manufacturing plants, substations, and maintenance workshops for safe oil transfer and storage operations. ([Fowlerwestrup][3])
+
