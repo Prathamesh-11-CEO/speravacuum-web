@@ -1,0 +1,65 @@
+## On-Line Drying Out System
+
+The On-Line Drying Out System is designed to remove moisture and contaminants from transformer insulating oil while the transformer remains in operation. Moisture present in oil and insulation paper reduces dielectric strength and accelerates insulation ageing, leading to reduced transformer life and possible failures. 
+
+Spera On-Line Drying Out Systems continuously circulate transformer oil through specialized drying media and filtration units to remove moisture and impurities without interrupting power supply. The system improves insulation properties, maintains oil quality, and extends transformer service life with safe and reliable operation. 
+
+---
+
+### Features
+
+Continuous online drying without transformer shutdown
+Compact and easy-to-operate design
+Moisture removal using special adsorption media
+High-efficiency filtration elements
+Digital moisture monitoring in PPM
+Continuous oil circulation system
+Low maintenance and easy cartridge replacement
+Optional PLC based automatic control system
+Audio / Visual alarm and protection system
+Suitable for permanent or temporary installation
+
+A demonstration video for the On-Line Drying Out System.
+
+---
+
+### Applications
+
+1
+Continuous moisture removal from transformer oil and insulation
+
+2
+Maintaining low moisture levels in operating transformers
+
+3
+Extension of transformer insulation life
+
+4
+Power transformers and distribution transformers
+
+5
+Electrical substations and utility maintenance
+
+6
+Preventive maintenance of transformers
+
+7
+Improvement of dielectric strength of insulating oil
+
+---
+
+### Questions? You’re covered
+
+**01. What is an On-Line Drying Out System used for?**
+An On-Line Drying Out System is used to remove moisture and contaminants from transformer oil while the transformer is in service. It helps maintain insulation quality and improves transformer reliability.
+
+**02. How does an On-Line Drying Out System work?**
+The system circulates transformer oil through special drying and filtration units where moisture and impurities are removed. The treated oil is then returned back to the transformer continuously.
+
+**03. Can drying be performed without shutting down the transformer?**
+Yes, the On-Line Drying Out System operates while the transformer remains energized. This eliminates downtime and allows continuous transformer operation.
+
+**04. What are the benefits of online drying?**
+Online drying reduces moisture content, improves breakdown voltage, extends insulation life, and reduces transformer maintenance costs.
+
+
