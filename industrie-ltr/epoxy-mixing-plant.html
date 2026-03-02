@@ -1175,4 +1175,29 @@
                     thumb.classList.add('active');
                     mainImg.classList.add('spera-fade-out');
                     var newSrc = thumb.getAttribute('data-full');
-              
+                    if (newSrc) {
+                        var img = new Image();
+                        img.onload = function() {
+                            mainImg.src = newSrc;
+                            mainImg.classList.remove('spera-fade-out');
+                        };
+                        img.src = newSrc;
+                    } else {
+                        mainImg.classList.remove('spera-fade-out');
+                    }
+                });
+            });
+        })();
+    </script>
+    <script>
+        // Ensure preloader is removed if it didn't hide automatically
+        window.addEventListener('load', function () {
+            var pre = document.getElementById('pre-load');
+            if (pre) {
+                pre.style.display = 'none';
+                pre.remove();
+            }
+        });
+    </script>
+</body>
+</html>
