@@ -19046,6 +19046,10 @@ html.lenis body {
   transition: all 0.5s ease;
   padding: 30px 30px;
   background: var(--rs-white);
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
 }
 @media only screen and (max-width: 1600px) {
   .rs-services-three .rs-services-content {
@@ -19089,6 +19093,12 @@ html.lenis body {
 }
 .rs-services-three .rs-services-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.rs-services-three .rs-services-wrapper {
+  height: 100%;
 }
 .rs-services-three .rs-services-item .descrip {
   margin-bottom: 20px;
@@ -19114,15 +19124,19 @@ html.lenis body {
 .rs-services-three .rs-services-thumb {
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
 .rs-services-three .rs-services-thumb img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
   transition: all 0.5s ease;
 }
 .rs-services-three .rs-services-btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: auto;
 }
 .rs-services-three .rs-services-title {
   margin-bottom: 12px;
@@ -23014,6 +23028,20 @@ html.lenis body {
 }
 .rs-contact-six .rs-contact-item:hover {
   border-color: var(--rs-theme-orange);
+}
+.rs-contact-six .rs-contact-item.pune-contact-card {
+  grid-column: 1/-1;
+  width: 100%;
+  max-width: 860px;
+  justify-self: center;
+}
+@media only screen and (max-width: 991px) {
+  .rs-contact-six .rs-contact-item.pune-contact-card {
+    max-width: 100%;
+  }
+}
+.rs-contact-six .rs-contact-item.pune-contact-card .rs-contact-title {
+  text-align: center;
 }
 .rs-contact-six .rs-contact-title {
   font-size: 30px;
