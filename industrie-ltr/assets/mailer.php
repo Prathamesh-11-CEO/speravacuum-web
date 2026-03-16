@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sub = trim($_POST["subject"] ?? '');
     $date = trim($_POST["date"] ?? '');
     $time = trim($_POST["time"] ?? '');
-    $time = trim($_POST["info"] ?? '');
+    $info = trim($_POST["info"] ?? '');  // Fixed: was overwriting $time
     $message = trim($_POST["message"] ?? '');
 
     if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -18,8 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $recipient = "demo@gmail.com";
-
+    $recipient = "sarveshc30@gmail.com";  // Change to your actual email
     $subject = "New contact from $name";
 
     $email_content = "Name: $name\n";
@@ -41,11 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email_content .= "Time: $time\n";
     }
     if (!empty($info)) {
-        $info_content .= "Info: $info\n";
+        $email_content .= "Info: $info\n";  // Fixed: was $info_content
     }
     $email_content .= "Message:\n$message\n";
 
-    $email_headers = "From: $name <$email>";
+    // More secure headers
+    $email_headers = "From: noreply@yourdomain.com\r\n";
+    $email_headers .= "Reply-To: $email\r\n";
+    $email_headers .= "X-Mailer: PHP/" . phpversion();
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         http_response_code(200);
