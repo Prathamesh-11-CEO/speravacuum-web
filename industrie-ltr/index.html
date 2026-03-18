@@ -909,18 +909,18 @@
                     </div>
                 </div>
                 <div class="row g-5">
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="rs-counter-item">
                             <div class="rs-counter-inner">
                                 <div class="rs-counter-number-wrapper">
-                                    <span class="rs-counter-number odometer" data-count="100">00</span>
+                                    <span class="rs-counter-number odometer" data-count="1000">00</span>
                                     <span class="prefix">+</span>
                                 </div>
                                 <span class="rs-counter-title">Successful Projects</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="rs-counter-item">
                             <div class="rs-counter-inner">
                                 <div class="rs-counter-number-wrapper">
@@ -931,7 +931,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="rs-counter-item">
                             <div class="rs-counter-inner">
                                 <div class="rs-counter-number-wrapper">
@@ -942,11 +942,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="rs-counter-item">
                             <div class="rs-counter-inner">
                                 <div class="rs-counter-number-wrapper">
-                                    <span class="rs-counter-number odometer" data-count="4">00</span>
+                                    <span class="rs-counter-number odometer" data-count="10">00</span>
                                     <span class="prefix">+</span>
                                 </div>
                                 <span class="rs-counter-title">Countries Worldwide Operations</span>
@@ -2197,43 +2197,43 @@
         </section> -->
         <!-- blog area end -->
 
-<section class="youtube-carousel-section">
-        <div class="carousel-container">
-            <!-- Header -->
-            <div class="carousel-header">
-                 <h2 class="rs-section-title rs-split-text-enable split-in-fade" >Latest Videos from Spera Vacuum
-                            </h2>
-                
+        <section class="youtube-carousel-section">
+            <div class="carousel-container">
+                <!-- Header -->
+                <div class="carousel-header">
+                    <h2 class="rs-section-title rs-split-text-enable split-in-fade" >Latest Videos from Spera Vacuum
+                                </h2>
+                    
+                </div>
+
+                <!-- Loading state -->
+                <div class="carousel-loading" id="carouselLoading">
+                    Loading videos...
+                </div>
+
+                <!-- Carousel wrapper (hidden initially) -->
+                <div class="carousel-wrapper" id="carouselWrapper" style="display: none;">
+                    <!-- Navigation arrows -->
+                    <button class="carousel-nav prev" id="prevBtn" aria-label="Previous videos"></button>
+                    <button class="carousel-nav next" id="nextBtn" aria-label="Next videos"></button>
+
+                    <!-- Video track -->
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Video cards will be inserted here by JavaScript -->
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Loading state -->
-            <div class="carousel-loading" id="carouselLoading">
-                Loading videos...
-            </div>
-
-            <!-- Carousel wrapper (hidden initially) -->
-            <div class="carousel-wrapper" id="carouselWrapper" style="display: none;">
-                <!-- Navigation arrows -->
-                <button class="carousel-nav prev" id="prevBtn" aria-label="Previous videos"></button>
-                <button class="carousel-nav next" id="nextBtn" aria-label="Next videos"></button>
-
-                <!-- Video track -->
-                <div class="carousel-track" id="carouselTrack">
-                    <!-- Video cards will be inserted here by JavaScript -->
+        <!-- Video Modal/Lightbox -->
+        <div class="video-modal" id="videoModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close video"></button>
+                <div class="modal-video-container" id="modalVideoContainer">
+                    <!-- YouTube iframe will be inserted here -->
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Video Modal/Lightbox -->
-    <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose" aria-label="Close video"></button>
-            <div class="modal-video-container" id="modalVideoContainer">
-                <!-- YouTube iframe will be inserted here -->
-            </div>
-        </div>
-    </div>
 
 
     <!-- ================================================

@@ -18708,7 +18708,57 @@ html.lenis body {
   -webkit-animation: slide-down 5s ease-out;
   animation: slide-down 5s ease-out;
 }
+/* Fix counter number wrapping issue */
+.rs-counter-one .rs-counter-number-wrapper {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
 
+.rs-counter-one .rs-counter-number,
+.rs-counter-one .prefix {
+    display: inline-block;
+    white-space: nowrap;
+}
+/* Fix counter number wrapping and overlap */
+.rs-counter-one .rs-counter-number-wrapper {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: visible; /* Allow content to be visible if it exceeds container */
+    justify-content: center; /* Center the numbers within their container */
+}
+
+.rs-counter-one .rs-counter-number,
+.rs-counter-one .prefix {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Ensure counter items don't overflow into each other */
+.rs-counter-item {
+    overflow: visible;
+}
+
+/* Add responsive font sizing to prevent overlap on smaller screens */
+@media only screen and (max-width: 991px) {
+    .rs-counter-one .rs-counter-number,
+    .rs-counter-one .prefix {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rs-counter-one .rs-counter-number,
+    .rs-counter-one .prefix {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .rs-counter-one .rs-counter-number,
+    .rs-counter-one .prefix {
+        font-size: 45px;
+    }
+}
 /*----------------------------------------*/
 /*  services css
 /*----------------------------------------*/
