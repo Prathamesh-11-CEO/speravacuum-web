@@ -255,14 +255,6 @@ i[class^=icon-] {
   position: relative;
 }
 
-  /* Align service nav button text to left and place icon to the right */
-  .rs-services-tab .nav-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-
   
 /*----------------------------------------
    Bootstrap customize
@@ -2395,7 +2387,7 @@ textarea:focus {
 .rs-counter-one .rs-counter-bg-thumb {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 80%;
   top: 0;
   inset-inline-start: 0;
   background-repeat: no-repeat;
@@ -7625,7 +7617,7 @@ html.lenis body {
 }
 .rs-banner-one .rs-banner-bg-thumb {
   position: absolute;
-  width: calc(100% - 100px);
+  width: 100%;
   height: 90%;
   top: 0;
   inset-inline-end: 0;
@@ -16490,10 +16482,26 @@ html.lenis body {
   transition: all 0.5s ease;
   padding: 40px 30px;
   position: relative;
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (max-width: 1600px) {
   .rs-feature-one .rs-feature-item {
     padding: 25px 20px 25px 20px;
+    min-height: 380px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .rs-feature-one .rs-feature-item {
+    min-height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .rs-feature-one .rs-feature-item {
+    min-height: auto;
   }
 }
 .rs-feature-one .rs-feature-item::before {
@@ -18762,6 +18770,238 @@ html.lenis body {
 /*----------------------------------------*/
 /*  services css
 /*----------------------------------------*/
+/* ================================================
+   PRODUCT DETAIL PAGE — VISUAL REDESIGN
+   ================================================ */
+
+/* ── Section spacing ── */
+.rs-services-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── Product title ── */
+.rs-services-details-wrapper > h3.rs-services-details-title {
+    font-size: 28px;
+    margin-top: 32px;
+    margin-bottom: 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #EA5501;
+    display: inline-block;
+}
+
+/* ── Intro paragraph ── */
+.rs-services-details-wrapper > p:not(.mb-20) {
+    margin-top: 16px;
+    margin-bottom: 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Remove the empty <p class="mb-25 mt-15"> gap */
+.rs-services-details-wrapper > p.mb-25.mt-15 {
+    display: none;
+}
+
+/* ── Section headings (Features, Applications, FAQ, Table) ── */
+.rs-services-details-wrapper h4.rs-services-details-title {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-left: 14px;
+    border-left: 4px solid #EA5501;
+    line-height: 1.3;
+}
+
+/* ── Remove empty spacing paragraphs ── */
+.rs-services-details-wrapper > p:empty,
+.rs-services-details-wrapper p.mt-20.mb-20:empty {
+    display: none;
+}
+
+/* Replace the &nbsp; spacer h6 with nothing visible */
+.rs-services-details-wrapper > h6:empty,
+.rs-services-details-wrapper > h6 {
+    display: none;
+}
+
+/* ── Features list ── */
+.rs-services-details-feature-list {
+    margin-top: 20px;
+}
+
+.rs-services-details-feature-list .single-column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rs-services-details-feature-list .single-column-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #444;
+    margin: 0;
+    transition: background 0.2s ease;
+}
+
+.rs-services-details-feature-list .single-column-list li:last-child {
+    border-bottom: none;
+}
+
+.rs-services-details-feature-list .single-column-list li:hover {
+    background: #fff5f0;
+}
+
+.rs-services-details-feature-list .single-column-list li svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #EA5501;
+}
+
+/* ── Video section ── */
+.rs-services-details-video.rs-video-one {
+    margin-top: 40px;
+    min-height: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Caption under video */
+.rs-services-details-wrapper > p.mb-20 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ── Filtration Parameters table ── */
+.rs-services-details-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.rs-services-details-table table {
+    margin: 0;
+    font-size: 15px;
+}
+
+.rs-services-details-table table thead th {
+    background: #EA5501;
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 16px;
+    border: none;
+    white-space: nowrap;
+}
+
+.rs-services-details-table table tbody tr td {
+    padding: 12px 16px;
+    border-color: #f0f0f0;
+    vertical-align: middle;
+}
+
+.rs-services-details-table table tbody tr td:first-child {
+    font-weight: 500;
+    color: #333;
+}
+
+/* "After Filtration" column — positive highlight */
+.rs-services-details-table table tbody tr td:last-child {
+    color: #2a7a3b;
+    font-weight: 600;
+}
+
+/* "Before Filtration" column */
+.rs-services-details-table table tbody tr td:nth-child(2) {
+    color: #c0392b;
+}
+
+.rs-services-details-table table tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+.rs-services-details-table table tbody tr:hover {
+    background: #fff5f0;
+}
+
+/* ── Applications list ── */
+.applications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.applications-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px !important;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 !important;
+    transition: background 0.2s ease;
+}
+
+.applications-list li:last-child {
+    border-bottom: none;
+}
+
+.applications-list li:hover {
+    background: #fff5f0;
+}
+
+.app-list-badge {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background: #EA5501;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(234,85,1,0.25);
+}
+
+.app-list-text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* ── FAQ / Accordion section ── */
+.rs-services-details-faq {
+    margin-top: 24px;
+}
+
+/* ── Replace &nbsp; spacer paragraphs before FAQ ── */
+.rs-services-details-wrapper > p + p + h3.rs-services-details-title {
+    margin-top: 40px;
+}
 .rs-services-one .rs-services-shape {
   position: absolute;
   top: 0;
@@ -21600,6 +21840,14 @@ html.lenis body {
 .rs-portfolio-six.has-theme-orange .rs-services-btn-wrapper {
   border-color: rgba(255, 255, 255, 0.08);
 }
+
+  /* Align service nav button text to left and place icon to the right */
+  .rs-services-tab .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
 .rs-portfolio-six.has-theme-orange .rs-square-btn {
   background: var(--rs-theme-orange);
 }
@@ -29141,6 +29389,7 @@ ol.applications-list li:not(:last-child) {
             position: relative;
             overflow: hidden;
             padding: 20px 0;
+            margin: 0 70px; /* Add margin to create space for buttons */
         }
 
         /* Track that holds all video cards */
@@ -29275,11 +29524,11 @@ ol.applications-list li:not(:last-child) {
         }
 
         .carousel-nav.prev {
-            left: -25px;
+            left: -70px; /* Position completely outside */
         }
 
         .carousel-nav.next {
-            right: -25px;
+            right: -70px; /* Position completely outside */
         }
 
         .carousel-nav.prev::before {
@@ -29409,12 +29658,16 @@ ol.applications-list li:not(:last-child) {
                 min-width: 320px;
             }
             
+            .carousel-wrapper {
+                margin: 0 70px;
+            }
+            
             .carousel-nav.prev {
-                left: 10px;
+                left: -60px;
             }
             
             .carousel-nav.next {
-                right: 10px;
+                right: -60px;
             }
         }
 
@@ -29443,11 +29696,22 @@ ol.applications-list li:not(:last-child) {
                 height: 40px;
             }
             
+            .carousel-wrapper {
+                margin: 0 55px;
+            }
+            
+            .carousel-nav.prev {
+                left: -50px;
+            }
+            
+            .carousel-nav.next {
+                right: -50px;
+            }
+            
             .modal-content {
                 width: 95%;
             }
         }
-
         @media (max-width: 480px) {
             .youtube-carousel-section {
                 padding: 40px 10px;
@@ -29469,9 +29733,31 @@ ol.applications-list li:not(:last-child) {
                 gap: 15px;
             }
             
+            .carousel-wrapper {
+                margin: 0 50px;
+            }
+            
+            .carousel-nav.prev {
+                left: -45px;
+            }
+            
+            .carousel-nav.next {
+                right: -45px;
+            }
+            
             .modal-close {
                 top: 10px;
                 right: 10px;
+            }
+        }        @media (max-width: 768px) {
+            .carousel-wrapper {
+                padding: 20px 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-wrapper {
+                padding: 20px 35px;
             }
         }
 /*# sourceMappingURL=main.css.map */
@@ -29481,12 +29767,14 @@ ol.applications-list li:not(:last-child) {
 
 .rs-mvv-card {
     position: relative;
-    height: 360px;
+    height: 450px;
     padding: 30px;
     background: #fff;
     overflow: hidden;
     border-radius: 0; /* SHARP CORNERS */
     transition: all 0.4s ease;
+    padding-bottom: 40px;  /* Changed from 20px to 40px */
+    margin-bottom: 20px;
 }
 
 /* Header layout */
@@ -29515,6 +29803,10 @@ ol.applications-list li:not(:last-child) {
 }
 
 /* Content */
+.rs-mvv-content {
+    padding-bottom: 30px;
+}
+
 .rs-mvv-content p,
 .rs-mvv-content li {
     font-size: 14px;
@@ -29544,7 +29836,7 @@ ol.applications-list li:not(:last-child) {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(234, 85, 1, 0.7);
+    background: rgba(234, 85, 1, 1);
     opacity: 0;
     transition: 0.4s;
     z-index: 0;
@@ -29555,6 +29847,7 @@ ol.applications-list li:not(:last-child) {
 .rs-mvv-content {
     position: relative;
     z-index: 2;
+    padding-bottom: 30px;
 }
 
 /* Your updated paths (correct) */
@@ -29658,20 +29951,21 @@ ol.applications-list li:not(:last-child) {
 }
 
 .marker-pin {
-    width: 22.4px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background: #EA5501;
-    border-radius: 50% 50% 50% 0;
+    border-radius: 50%;
     position: relative;
-    transform: rotate(-45deg);
+    transform: none;
     box-shadow: 0 4px 8px rgba(234, 85, 1, 0.4);
+    border: 3px solid white;
 }
 
 .marker-pin::after {
     content: '';
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 8px;
+    height: 8px;
     background: white;
     border-radius: 50%;
     top: 50%;
@@ -29687,15 +29981,25 @@ ol.applications-list li:not(:last-child) {
 /* Pulsing Effect */
 .marker-pulse {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: #EA5501;
     opacity: 0;
-    top: 5px;
+    top: 0;
     left: 0;
-    transform: rotate(-45deg);
     animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
 @keyframes pulse {
@@ -29714,7 +30018,7 @@ ol.applications-list li:not(:last-child) {
     position: absolute;
     bottom: -35px;
     left: 50%;
-    transform: translateX(-50%) rotate(45deg);
+    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 6px 12px;
@@ -29983,4 +30287,83 @@ ol.applications-list li:not(:last-child) {
     .rs-contact-modern {
         padding: 25px;
     }
-} */
+} 
+
+/* Claude CSS */
+/* Remove space between counter and testimonial sections */
+.rs-testimonial-area.rs-testimonial-three {
+    margin-top: -136px;
+}
+
+@media only screen and (max-width: 991px) {
+    .rs-testimonial-area.rs-testimonial-three {
+        margin-top: -80px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rs-testimonial-area.rs-testimonial-three {
+        margin-top: -70px;
+    }
+}
+.view-products-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 600;
+
+    /* Remove Bootstrap tab styles */
+    background: #f35501; /* light orange */
+    color: #fff !important;
+    border-radius: 6px;
+}
+
+/* Hover effect (darker orange) */
+.view-products-btn:hover {
+    background: #d94700;
+    color: #fff !important;
+}
+
+/* Remove Bootstrap active/tab styles interference */
+.view-products-btn.nav-link.active {
+    background: #f35501;
+    color: #fff;
+}
+
+/* Remove underline on hover */
+.view-products-btn:hover {
+    text-decoration: none;
+}
+
+.view-products-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+
+    /* FORCE the default state */
+    background-color: #f35501 !important;
+    color: #fff !important;
+    border: none;
+}
+
+/* Hover (already working, just keep it consistent) */
+.view-products-btn:hover {
+    background-color: #d94700 !important;
+    color: #fff !important;
+}
+
+/* Kill Bootstrap tab styles completely */
+.view-products-btn.nav-link {
+    background: #f35501 !important;
+}
+
+.view-products-btn.nav-link.active,
+.view-products-btn.nav-link:focus {
+    background: #f35501 !important;
+    color: #fff !important;
+}
