@@ -255,14 +255,6 @@ i[class^=icon-] {
   position: relative;
 }
 
-  /* Align service nav button text to left and place icon to the right */
-  .rs-services-tab .nav-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-  }
-
   
 /*----------------------------------------
    Bootstrap customize
@@ -2395,7 +2387,7 @@ textarea:focus {
 .rs-counter-one .rs-counter-bg-thumb {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 80%;
   top: 0;
   inset-inline-start: 0;
   background-repeat: no-repeat;
@@ -7625,7 +7617,7 @@ html.lenis body {
 }
 .rs-banner-one .rs-banner-bg-thumb {
   position: absolute;
-  width: calc(100% - 100px);
+  width: 100%;
   height: 90%;
   top: 0;
   inset-inline-end: 0;
@@ -16490,10 +16482,26 @@ html.lenis body {
   transition: all 0.5s ease;
   padding: 40px 30px;
   position: relative;
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (max-width: 1600px) {
   .rs-feature-one .rs-feature-item {
     padding: 25px 20px 25px 20px;
+    min-height: 380px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .rs-feature-one .rs-feature-item {
+    min-height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .rs-feature-one .rs-feature-item {
+    min-height: auto;
   }
 }
 .rs-feature-one .rs-feature-item::before {
@@ -18708,10 +18716,292 @@ html.lenis body {
   -webkit-animation: slide-down 5s ease-out;
   animation: slide-down 5s ease-out;
 }
+/* Fix counter number wrapping issue */
+.rs-counter-one .rs-counter-number-wrapper {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
 
+.rs-counter-one .rs-counter-number,
+.rs-counter-one .prefix {
+    display: inline-block;
+    white-space: nowrap;
+}
+/* Fix counter number wrapping and overlap */
+.rs-counter-one .rs-counter-number-wrapper {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: visible; /* Allow content to be visible if it exceeds container */
+    justify-content: center; /* Center the numbers within their container */
+}
+
+.rs-counter-one .rs-counter-number,
+.rs-counter-one .prefix {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Ensure counter items don't overflow into each other */
+.rs-counter-item {
+    overflow: visible;
+}
+
+/* Add responsive font sizing to prevent overlap on smaller screens */
+@media only screen and (max-width: 991px) {
+    .rs-counter-one .rs-counter-number,
+    .rs-counter-one .prefix {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rs-counter-one .rs-counter-number,
+    .rs-counter-one .prefix {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .rs-counter-one .rs-counter-number,
+    .rs-counter-one .prefix {
+        font-size: 45px;
+    }
+}
 /*----------------------------------------*/
 /*  services css
 /*----------------------------------------*/
+/* ================================================
+   PRODUCT DETAIL PAGE — VISUAL REDESIGN
+   ================================================ */
+
+/* ── Section spacing ── */
+.rs-services-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── Product title ── */
+.rs-services-details-wrapper > h3.rs-services-details-title {
+    font-size: 28px;
+    margin-top: 32px;
+    margin-bottom: 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #EA5501;
+    display: inline-block;
+}
+
+/* ── Intro paragraph ── */
+.rs-services-details-wrapper > p:not(.mb-20) {
+    margin-top: 16px;
+    margin-bottom: 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Remove the empty <p class="mb-25 mt-15"> gap */
+.rs-services-details-wrapper > p.mb-25.mt-15 {
+    display: none;
+}
+
+/* ── Section headings (Features, Applications, FAQ, Table) ── */
+.rs-services-details-wrapper h4.rs-services-details-title {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-left: 14px;
+    border-left: 4px solid #EA5501;
+    line-height: 1.3;
+}
+
+/* ── Remove empty spacing paragraphs ── */
+.rs-services-details-wrapper > p:empty,
+.rs-services-details-wrapper p.mt-20.mb-20:empty {
+    display: none;
+}
+
+/* Replace the &nbsp; spacer h6 with nothing visible */
+.rs-services-details-wrapper > h6:empty,
+.rs-services-details-wrapper > h6 {
+    display: none;
+}
+
+/* ── Features list ── */
+.rs-services-details-feature-list {
+    margin-top: 20px;
+}
+
+.rs-services-details-feature-list .single-column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rs-services-details-feature-list .single-column-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #444;
+    margin: 0;
+    transition: background 0.2s ease;
+}
+
+.rs-services-details-feature-list .single-column-list li:last-child {
+    border-bottom: none;
+}
+
+.rs-services-details-feature-list .single-column-list li:hover {
+    background: #fff5f0;
+}
+
+.rs-services-details-feature-list .single-column-list li svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #EA5501;
+}
+
+/* ── Video section ── */
+.rs-services-details-video.rs-video-one {
+    margin-top: 40px;
+    min-height: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Caption under video */
+.rs-services-details-wrapper > p.mb-20 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ── Filtration Parameters table ── */
+.rs-services-details-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.rs-services-details-table table {
+    margin: 0;
+    font-size: 15px;
+}
+
+.rs-services-details-table table thead th {
+    background: #EA5501;
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 16px;
+    border: none;
+    white-space: nowrap;
+}
+
+.rs-services-details-table table tbody tr td {
+    padding: 12px 16px;
+    border-color: #f0f0f0;
+    vertical-align: middle;
+}
+
+.rs-services-details-table table tbody tr td:first-child {
+    font-weight: 500;
+    color: #333;
+}
+
+/* "After Filtration" column — positive highlight */
+.rs-services-details-table table tbody tr td:last-child {
+    color: #2a7a3b;
+    font-weight: 600;
+}
+
+/* "Before Filtration" column */
+.rs-services-details-table table tbody tr td:nth-child(2) {
+    color: #c0392b;
+}
+
+.rs-services-details-table table tbody tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+.rs-services-details-table table tbody tr:hover {
+    background: #fff5f0;
+}
+
+/* ── Applications list ── */
+.applications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.applications-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px !important;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 !important;
+    transition: background 0.2s ease;
+}
+
+.applications-list li:last-child {
+    border-bottom: none;
+}
+
+.applications-list li:hover {
+    background: #fff5f0;
+}
+
+.app-list-badge {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background: #EA5501;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(234,85,1,0.25);
+}
+
+.app-list-text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* ── FAQ / Accordion section ── */
+.rs-services-details-faq {
+    margin-top: 24px;
+}
+
+/* ── Replace &nbsp; spacer paragraphs before FAQ ── */
+.rs-services-details-wrapper > p + p + h3.rs-services-details-title {
+    margin-top: 40px;
+}
 .rs-services-one .rs-services-shape {
   position: absolute;
   top: 0;
@@ -21550,6 +21840,14 @@ html.lenis body {
 .rs-portfolio-six.has-theme-orange .rs-services-btn-wrapper {
   border-color: rgba(255, 255, 255, 0.08);
 }
+
+  /* Align service nav button text to left and place icon to the right */
+  .rs-services-tab .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
 .rs-portfolio-six.has-theme-orange .rs-square-btn {
   background: var(--rs-theme-orange);
 }
@@ -28592,31 +28890,31 @@ a.ui-button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 150px;
+  gap: 110px;
   flex-wrap: wrap;
   padding: 8px 0;
 }
 .certificates-container .cert-logos img {
-  width: 80px;
+  width: 140px;
   height: auto;
   object-fit: contain;
   display: block;
 }
 @media (max-width: 767px) {
   .certificates-container .cert-logos img {
-    width: 80px;
+    width: 140px;
     height: auto;
   }
 }
 
 /* Specific sizing for the startup badge only */
 .certificates-container .cert-logos img.startup-logo {
-  width: 100px;
+  width: 170px;
   height: auto;
 }
 @media (max-width: 767px) {
   .certificates-container .cert-logos img.startup-logo {
-    width: 80px;
+    width: 170px;
     height: auto;
   }
 }
@@ -29091,6 +29389,7 @@ ol.applications-list li:not(:last-child) {
             position: relative;
             overflow: hidden;
             padding: 20px 0;
+            margin: 0 70px; /* Add margin to create space for buttons */
         }
 
         /* Track that holds all video cards */
@@ -29180,7 +29479,7 @@ ol.applications-list li:not(:last-child) {
         }
 
         .video-title {
-            font-size: 1rem;
+            font-size: 17px;
             font-weight: 600;
             color: #222;
             line-height: 1.4;
@@ -29192,7 +29491,7 @@ ol.applications-list li:not(:last-child) {
         }
 
         .video-channel {
-            font-size: 0.9rem;
+            font-size: 15px;
             color: #666;
         }
 
@@ -29225,11 +29524,11 @@ ol.applications-list li:not(:last-child) {
         }
 
         .carousel-nav.prev {
-            left: -25px;
+            left: -70px; /* Position completely outside */
         }
 
         .carousel-nav.next {
-            right: -25px;
+            right: -70px; /* Position completely outside */
         }
 
         .carousel-nav.prev::before {
@@ -29359,12 +29658,16 @@ ol.applications-list li:not(:last-child) {
                 min-width: 320px;
             }
             
+            .carousel-wrapper {
+                margin: 0 70px;
+            }
+            
             .carousel-nav.prev {
-                left: 10px;
+                left: -60px;
             }
             
             .carousel-nav.next {
-                right: 10px;
+                right: -60px;
             }
         }
 
@@ -29393,11 +29696,22 @@ ol.applications-list li:not(:last-child) {
                 height: 40px;
             }
             
+            .carousel-wrapper {
+                margin: 0 55px;
+            }
+            
+            .carousel-nav.prev {
+                left: -50px;
+            }
+            
+            .carousel-nav.next {
+                right: -50px;
+            }
+            
             .modal-content {
                 width: 95%;
             }
         }
-
         @media (max-width: 480px) {
             .youtube-carousel-section {
                 padding: 40px 10px;
@@ -29419,9 +29733,638 @@ ol.applications-list li:not(:last-child) {
                 gap: 15px;
             }
             
+            .carousel-wrapper {
+                margin: 0 50px;
+            }
+            
+            .carousel-nav.prev {
+                left: -45px;
+            }
+            
+            .carousel-nav.next {
+                right: -45px;
+            }
+            
             .modal-close {
                 top: 10px;
                 right: 10px;
             }
+        }        @media (max-width: 768px) {
+            .carousel-wrapper {
+                padding: 20px 45px;
+            }
         }
+
+        @media (max-width: 480px) {
+            .carousel-wrapper {
+                padding: 20px 35px;
+            }
+        }
+
 /*# sourceMappingURL=main.css.map */
+/* ===============================
+   MVV Cards - FINAL (Feature Match)
+================================= */
+
+.rs-mvv-card {
+    position: relative;
+    height: 470px;
+    padding: 30px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 0; /* SHARP CORNERS */
+    transition: all 0.4s ease;
+    padding-bottom: 40px;  /* Changed from 20px to 40px */
+    margin-bottom: 20px;
+}
+
+/* Header layout */
+.rs-mvv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rs-mvv-header h5 {
+    margin: 0;
+    font-size: 22px;
+    color: #111;
+    transition: 0.4s;
+}
+
+/* Icon (same behavior as rs-feature) */
+.rs-mvv-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #EA5501;
+    fill: none;
+    stroke-width: 2;
+    transition: all 0.5s ease;
+}
+
+/* Content */
+.rs-mvv-content {
+    padding-bottom: 30px;
+}
+
+.rs-mvv-content p,
+.rs-mvv-content li {
+    font-size: 16px;
+    color: #555;
+    transition: 0.4s;
+}
+
+.rs-mvv-content ul {
+    padding-left: 18px;
+}
+
+/* Background image */
+.rs-mvv-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+/* Overlay */
+.rs-mvv-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(234, 85, 1, 1);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 0;
+}
+
+/* Content above overlay */
+.rs-mvv-header,
+.rs-mvv-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 30px;
+}
+
+/* Your updated paths (correct) */
+.rs-mvv-card[data-bg="assets/images/about/our-mission.jpg"]::before {
+    background-image: url("../images/about/our-mission.jpg");
+}
+.rs-mvv-card[data-bg="assets/images/about/our-vision.jpg"]::before {
+    background-image: url("../images/about/our-vision.jpg");
+}
+.rs-mvv-card[data-bg="assets/images/about/our-values.jpg"]::before {
+    background-image: url("../images/about/our-values.jpg");
+}
+
+/* HOVER = EXACT rs-feature STYLE */
+.rs-mvv-card:hover {
+    transform: translateY(-8px);
+}
+
+/* background reveal */
+.rs-mvv-card:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.rs-mvv-card:hover::after {
+    opacity: 1;
+}
+
+/* text turns white */
+.rs-mvv-card:hover h5,
+.rs-mvv-card:hover p,
+.rs-mvv-card:hover li {
+    color: #fff;
+}
+
+/* ICON FLIP (same as feature section) */
+.rs-mvv-card:hover .rs-mvv-icon svg {
+    stroke: #fff;
+    transform: rotateY(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rs-mvv-card {
+        height: auto;
+    }
+}
+
+/* Global Presence Css */
+/* ================================================
+   OPTION 2: SIMPLE STATIC MAP CSS
+   Pure CSS, No JavaScript Required
+   ================================================ */
+
+/* Global Presence Section */
+.rs-global-presence-area {
+    position: relative;
+    background: #ffffff;
+}
+
+.rs-global-presence-wrapper {
+    position: relative;
+}
+
+/* Simple World Map */
+.rs-simple-world-map {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.map-image-container {
+    position: relative;
+    width: 90%;
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+}
+
+.world-map-base {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.7;
+    filter: grayscale(30%);
+}
+
+/* Location Markers */
+.location-marker {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.location-marker:hover {
+    z-index: 100;
+    transform: translate(-50%, -100%) scale(1.2);
+}
+
+.marker-pin {
+    width: 24px;
+    height: 24px;
+    background: #EA5501;
+    border-radius: 50%;
+    position: relative;
+    transform: none;
+    box-shadow: 0 4px 8px rgba(234, 85, 1, 0.4);
+    border: 3px solid white;
+}
+
+.marker-pin::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.location-marker:hover .marker-pin {
+    background: #ff6a1a;
+    box-shadow: 0 6px 16px rgba(234, 85, 1, 0.6);
+}
+
+/* Pulsing Effect */
+.marker-pulse {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #EA5501;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: rotate(-45deg) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Marker Label */
+.marker-label {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.marker-label::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.85);
+}
+
+.location-marker:hover .marker-label {
+    opacity: 1;
+    bottom: -40px;
+}
+
+/* Country Grid */
+.rs-country-grid {
+    margin-top: 50px;
+}
+
+.country-card {
+    text-align: center;
+    padding: 20px 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    height: 100%;
+}
+
+.country-card:hover {
+    border-color: #EA5501;
+    background: linear-gradient(135deg, #fff 0%, #fff5f0 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(234, 85, 1, 0.15);
+}
+
+.country-flag {
+    font-size: 40px;
+    margin-bottom: 12px;
+    display: block;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.country-card:hover .country-flag {
+    transform: scale(1.1);
+}
+
+.country-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+    .marker-pin {
+        width: 25px;
+        height: 35px;
+    }
+    
+    .marker-pin::after {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .marker-pulse {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .marker-label {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .rs-simple-world-map {
+        margin-bottom: 40px;
+    }
+    
+    .country-card {
+        padding: 15px 10px;
+    }
+    
+    .country-flag {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    
+    .country-name {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .map-image-container {
+        border-radius: 8px;
+    }
+    
+    .marker-pin {
+        width: 20px;
+        height: 28px;
+    }
+    
+    .marker-pin::after {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .marker-pulse {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .marker-label {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    .country-card {
+        padding: 12px 8px;
+    }
+    
+    .country-flag {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+    
+    .country-name {
+        font-size: 11px;
+    }
+    
+    .rs-country-grid {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .marker-pin {
+        width: 16px;
+        height: 24px;
+    }
+    
+    .marker-pin::after {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .marker-pulse {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .country-flag {
+        font-size: 28px;
+    }
+    
+    .country-name {
+        font-size: 10px;
+    }
+}
+
+/* WOW Animation Support */
+.wow.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Stagger animation for markers */
+.location-marker {
+    animation: markerAppear 0.6s ease-out backwards;
+}
+
+.location-marker:nth-child(2) { animation-delay: 0.1s; }
+.location-marker:nth-child(3) { animation-delay: 0.2s; }
+.location-marker:nth-child(4) { animation-delay: 0.3s; }
+.location-marker:nth-child(5) { animation-delay: 0.4s; }
+.location-marker:nth-child(6) { animation-delay: 0.5s; }
+.location-marker:nth-child(7) { animation-delay: 0.6s; }
+.location-marker:nth-child(8) { animation-delay: 0.7s; }
+.location-marker:nth-child(9) { animation-delay: 0.8s; }
+.location-marker:nth-child(10) { animation-delay: 0.9s; }
+.location-marker:nth-child(11) { animation-delay: 1s; }
+
+@keyframes markerAppear {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -100%) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -100%) scale(1);
+    }
+}
+
+/* Contact Area GPT CSS*/
+/* Modern contact layout */
+/* .rs-contact-modern {
+    background: #fff;
+    padding: 40px;
+    height: 100%;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+    border-radius: 8px;
+}
+
+.rs-contact-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.rs-contact-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.rs-contact-icon {
+    font-size: 20px;
+    color: #EA5501;
+    min-width: 30px;
+}
+
+.rs-contact-map iframe {
+    height: 100%;
+    min-height: 400px;
+    border-radius: 8px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .rs-contact-modern {
+        padding: 25px;
+    }
+} 
+
+/* Claude CSS */
+/* Remove space between counter and testimonial sections */
+.rs-testimonial-area.rs-testimonial-three {
+    margin-top: -136px;
+}
+
+@media only screen and (max-width: 991px) {
+    .rs-testimonial-area.rs-testimonial-three {
+        margin-top: -80px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rs-testimonial-area.rs-testimonial-three {
+        margin-top: -70px;
+    }
+}
+.view-products-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 600;
+
+    /* Remove Bootstrap tab styles */
+    background: #f35501; /* light orange */
+    color: #fff !important;
+    border-radius: 6px;
+}
+
+/* Hover effect (darker orange) */
+.view-products-btn:hover {
+    background: #d94700;
+    color: #fff !important;
+}
+
+/* Remove Bootstrap active/tab styles interference */
+.view-products-btn.nav-link.active {
+    background: #f35501;
+    color: #fff;
+}
+
+/* Remove underline on hover */
+.view-products-btn:hover {
+    text-decoration: none;
+}
+
+.view-products-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 6px;
+
+    /* FORCE the default state */
+    background-color: #f35501 !important;
+    color: #fff !important;
+    border: none;
+}
+
+/* Hover (already working, just keep it consistent) */
+.view-products-btn:hover {
+    background-color: #d94700 !important;
+    color: #fff !important;
+}
+
+/* Kill Bootstrap tab styles completely */
+.view-products-btn.nav-link {
+    background: #f35501 !important;
+}
+
+.view-products-btn.nav-link.active,
+.view-products-btn.nav-link:focus {
+    background: #f35501 !important;
+    color: #fff !important;
+}
