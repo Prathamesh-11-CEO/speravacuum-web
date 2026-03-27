@@ -22,9 +22,53 @@
     <link rel="stylesheet" href="assets/css/vendor/spacing.css">
     <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .rs-partners-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        .rs-partners-section .rs-section-subtitle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .rs-partners-carousel-wrap {
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .rs-partners-swiper {
+            width: 100%;
+        }
+        .rs-partners-swiper .swiper-wrapper {
+            align-items: center;
+        }
+        .rs-partners-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 10px;
+            height: 110px;
+            padding: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+        }
+        .rs-partners-logo img {
+            max-height: 70px;
+            max-width: 130px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(30%);
+            transition: filter 0.3s ease;
+        }
+        .rs-partners-logo:hover img {
+            filter: grayscale(0%);
+        }
+    </style>
 </head>
 
-<body class="rs-smoother-yes rtl">
+<body class="rs-smoother-yes">
 
     <!-- preloader start -->
     <div id="pre-load">
@@ -962,130 +1006,151 @@
         <!-- progress area end -->
 
         <!-- testimonial area start -->
-        <section class="rs-testimonial-area rs-testimonial-three rs-swiper has-bg-black">
-            <div class="rs-testimonial-bg-thumb" data-background="assets/images/testimonial/testimonial.jpg">
-            </div>
-            <div class="rs-testimonial-bg-thumb-two" data-background="assets/images/bg/testimonials-bg-06.png"> </div>
+        <section class="rs-testimonial-area section-space rs-testimonial-one primary-bg rs-swiper">
             <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-xxl-6 col-xl-7 col-lg-7">
-                        <div class="rs-testimonial-wrapper">
-                            <div class="rs-section-title-wrapper section-title-space">
-                                <span
-                                    class="rs-section-subtitle has-theme-orange justify-content-start has-transparent">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
-                                        fill="none">
-                                        <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
-                                            fill="#EA5501"></path>
-                                    </svg>
-                                    Reviews
-                                </span>
-                                <h2 class="rs-section-title rs-split-text-enable split-in-fade">what Client Say</h2>
-                            </div>
-                            <div class="rs-testimonial-slider-wrapper">
-                                <div class="swiper" data-clone-slides="false" data-loop="true" data-speed="1500"
-                                    data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true"
-                                    data-effect="false" data-delay="2500" data-item="1" data-item-xl="1"
-                                    data-item-lg="1" data-item-md="1" data-item-sm="1" data-item-xs="1"
-                                    data-item-mobile="1" data-margin="30" data-margin-xl="30">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="rs-testimonial-item">
-                                                <div class="rs-testimonial-avater-thumb">
-                                                    <div class="rs-testimonial-thumb">
+                <div class="row  g-5 section-title-space align-items-center">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="rs-section-title-wrapper">
+                            <span class="rs-section-subtitle has-theme-orange justify-content-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
+                                    fill="none">
+                                    <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
+                                        fill="#EA5501"></path>
+                                </svg>
+                                Testimonials
+                            </span>
+                            <h2 class="rs-section-title rs-split-text-enable split-in-fade">What people say about
+                                Spera Vacuum</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper" data-clone-slides="false" data-loop="true" data-speed="1500"
+                            data-autoplay="true" data-dots-dynamic="false" data-hover-pause="true" data-effect="false"
+                            data-delay="2500" data-item="3" data-item-xl="3" data-item-lg="3" data-item-md="2"
+                            data-item-sm="1" data-item-xs="1" data-item-mobile="1" data-margin="30" data-margin-xl="30">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="rs-testimonial-item has-clip-path">
+                                        <div class="rs-testimonial-content">
+                                            <div class="rs-testimonial-top">
+                                                <div class="rs-testimonial-avater-wrapper">
+                                                    <div class="rs-testimonial-avater-thumb">
                                                         <img src="assets/images/user/user-thumb-01.png" alt="image">
                                                     </div>
-                                                    <div class="rs-testimonial-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="29"
-                                                            viewBox="0 0 40 29" fill="none">
-                                                            <path
-                                                                d="M2.85714 29H11.4286L17.1429 17.4V0H0V17.4H8.57143L2.85714 29ZM25.7143 29H34.2857L40 17.4V0H22.8571V17.4H31.4286L25.7143 29Z"
-                                                                fill="white" fill-opacity="0.4"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="rs-testimonial-content">
-                                                    <h5 class="rs-testimonial-title">Best Company</h5>
-                                                    <div class="rs-testimonial-description">
-                                                        <p>Podcasting operational change management inside of workflows
-                                                            to establish a
-                                                            framework Taking seamless key performance indicators.</p>
-                                                    </div>
-                                                    <div class="rs-tesimonial-avater-info">
-                                                        <h6 class="rs-testimonial-avater-title">Nayeem</h6>
-                                                        <span class="rs-testimonial-avater-designation">Manager</span>
+                                                    <div class="rs-testimonial-avater-info">
+                                                        <h6 class="rs-testimonial-avater-title">John Wlick</h6>
+                                                        <span class="rs-testimonial-avater-designation">Ceo</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-testimonial-item">
-                                                <div class="rs-testimonial-avater-thumb">
-                                                    <div class="rs-testimonial-thumb">
-                                                        <img src="assets/images/user/user-thumb-02.png" alt="image">
-                                                    </div>
-                                                    <div class="rs-testimonial-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="29"
-                                                            viewBox="0 0 40 29" fill="none">
-                                                            <path
-                                                                d="M2.85714 29H11.4286L17.1429 17.4V0H0V17.4H8.57143L2.85714 29ZM25.7143 29H34.2857L40 17.4V0H22.8571V17.4H31.4286L25.7143 29Z"
-                                                                fill="white" fill-opacity="0.4"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div class="rs-testimonial-content">
-                                                    <h5 class="rs-testimonial-title">Best Company</h5>
-                                                    <div class="rs-testimonial-description">
-                                                        <p>Podcasting operational change management inside of workflows
-                                                            to establish a
-                                                            framework Taking seamless key performance indicators.</p>
-                                                    </div>
-                                                    <div class="rs-tesimonial-avater-info">
-                                                        <h6 class="rs-testimonial-avater-title">Abdur Rashid</h6>
-                                                        <span class="rs-testimonial-avater-designation">Founder &amp;
-                                                            CEO</span>
-                                                    </div>
-                                                </div>
+                                            <div class="rs-testimonial-description">
+                                                <p> More-or-less normal distribution of letters, as opposed to using
+                                                    content making
+                                                    it look like readable english. </p>
                                             </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="rs-testimonial-item">
-                                                <div class="rs-testimonial-avater-thumb">
-                                                    <div class="rs-testimonial-thumb">
-                                                        <img src="assets/images/user/user-thumb-03.png" alt="image">
-                                                    </div>
-                                                    <div class="rs-testimonial-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="29"
-                                                            viewBox="0 0 40 29" fill="none">
-                                                            <path
-                                                                d="M2.85714 29H11.4286L17.1429 17.4V0H0V17.4H8.57143L2.85714 29ZM25.7143 29H34.2857L40 17.4V0H22.8571V17.4H31.4286L25.7143 29Z"
-                                                                fill="white" fill-opacity="0.4"></path>
-                                                        </svg>
-                                                    </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <div class="rs-rating">
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-half-line"></i></span>
                                                 </div>
-                                                <div class="rs-testimonial-content">
-                                                    <h5 class="rs-testimonial-title">Best Company</h5>
-                                                    <div class="rs-testimonial-description">
-                                                        <p>Podcasting operational change management inside of workflows
-                                                            to establish a
-                                                            framework Taking seamless key performance indicators.</p>
-                                                    </div>
-                                                    <div class="rs-tesimonial-avater-info">
-                                                        <h6 class="rs-testimonial-avater-title">Tom Hanks</h6>
-                                                        <span class="rs-testimonial-avater-designation">Customer</span>
-                                                    </div>
+                                                <div class="rs-testimonial-quote">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="43"
+                                                        viewBox="0 0 60 43" fill="none">
+                                                        <path
+                                                            d="M57.3913 0H33.913C32.4746 0 31.3043 1.14482 31.3043 2.55199V24.2439C31.3043 25.6511 32.4746 26.7959 33.913 26.7959H45V42.1077C45 42.7082 45.805 42.9717 46.1739 42.4907L59.8696 24.6267C59.9542 24.5163 60 24.382 60 24.2439V2.55199C60 1.14482 58.8299 0 57.3913 0ZM58.6957 24.0312L46.3043 40.1939V26.1579C46.3043 25.8055 46.0124 25.5199 45.6522 25.5199H33.913C33.1938 25.5199 32.6087 24.9475 32.6087 24.2439V2.55199C32.6087 1.84841 33.1938 1.276 33.913 1.276H57.3913C58.1105 1.276 58.6957 1.84841 58.6957 2.55199V24.0312ZM26.087 0H2.6087C1.17026 0 0 1.14482 0 2.55199V24.2439C0 25.6511 1.17026 26.7959 2.6087 26.7959H13.6957V42.1079C13.6957 42.7049 14.5004 42.9721 14.8696 42.4907L28.5652 24.6267C28.6499 24.5163 28.6957 24.382 28.6957 24.2439V2.55199C28.6957 1.14482 27.5254 0 26.087 0ZM27.3913 24.0312L15 40.1939V26.1579C15 25.8055 14.708 25.5199 14.3478 25.5199H2.6087C1.88948 25.5199 1.30435 24.9475 1.30435 24.2439V2.55199C1.30435 1.84841 1.88948 1.276 2.6087 1.276H26.087C26.8062 1.276 27.3913 1.84841 27.3913 2.55199V24.0312Z"
+                                                            fill="#1F1F1F"></path>
+                                                    </svg>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- If we need navigation buttons -->
-                                    <div class=" rs-testimonial-navigation">
-                                        <button class="swiper-button-prev rs-swiper-btn has-small hover-light-orange"><i
-                                                class="fa-regular fa-arrow-left"></i></button>
-                                        <button class="swiper-button-next rs-swiper-btn has-small hover-light-orange"><i
-                                                class="fa-regular fa-arrow-right"></i></button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="rs-testimonial-item has-clip-path">
+                                        <div class="rs-testimonial-content">
+                                            <div class="rs-testimonial-top">
+                                                <div class="rs-testimonial-avater-wrapper">
+                                                    <div class="rs-testimonial-avater-thumb">
+                                                        <img src="assets/images/user/user-thumb-02.png" alt="image">
+                                                    </div>
+                                                    <div class="rs-testimonial-avater-info">
+                                                        <h6 class="rs-testimonial-avater-title">Joshua Sendu</h6>
+                                                        <span class="rs-testimonial-avater-designation">Engineer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rs-testimonial-description">
+                                                <p> More-or-less normal distribution of letters, as opposed to using
+                                                    content making
+                                                    it look like readable english. </p>
+                                            </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <div class="rs-rating">
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-half-line"></i></span>
+                                                </div>
+                                                <div class="rs-testimonial-quote">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="43"
+                                                        viewBox="0 0 60 43" fill="none">
+                                                        <path
+                                                            d="M57.3913 0H33.913C32.4746 0 31.3043 1.14482 31.3043 2.55199V24.2439C31.3043 25.6511 32.4746 26.7959 33.913 26.7959H45V42.1077C45 42.7082 45.805 42.9717 46.1739 42.4907L59.8696 24.6267C59.9542 24.5163 60 24.382 60 24.2439V2.55199C60 1.14482 58.8299 0 57.3913 0ZM58.6957 24.0312L46.3043 40.1939V26.1579C46.3043 25.8055 46.0124 25.5199 45.6522 25.5199H33.913C33.1938 25.5199 32.6087 24.9475 32.6087 24.2439V2.55199C32.6087 1.84841 33.1938 1.276 33.913 1.276H57.3913C58.1105 1.276 58.6957 1.84841 58.6957 2.55199V24.0312ZM26.087 0H2.6087C1.17026 0 0 1.14482 0 2.55199V24.2439C0 25.6511 1.17026 26.7959 2.6087 26.7959H13.6957V42.1079C13.6957 42.7049 14.5004 42.9721 14.8696 42.4907L28.5652 24.6267C28.6499 24.5163 28.6957 24.382 28.6957 24.2439V2.55199C28.6957 1.14482 27.5254 0 26.087 0ZM27.3913 24.0312L15 40.1939V26.1579C15 25.8055 14.708 25.5199 14.3478 25.5199H2.6087C1.88948 25.5199 1.30435 24.9475 1.30435 24.2439V2.55199C1.30435 1.84841 1.88948 1.276 2.6087 1.276H26.087C26.8062 1.276 27.3913 1.84841 27.3913 2.55199V24.0312Z"
+                                                            fill="#1F1F1F"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="rs-testimonial-item has-clip-path">
+                                        <div class="rs-testimonial-content">
+                                            <div class="rs-testimonial-top">
+                                                <div class="rs-testimonial-avater-wrapper">
+                                                    <div class="rs-testimonial-avater-thumb">
+                                                        <img src="assets/images/user/user-thumb-03.png" alt="image">
+                                                    </div>
+                                                    <div class="rs-testimonial-avater-info">
+                                                        <h6 class="rs-testimonial-avater-title">Penelopa Miller</h6>
+                                                        <span class="rs-testimonial-avater-designation">Team
+                                                            Manager</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rs-testimonial-description">
+                                                <p> More-or-less normal distribution of letters, as opposed to using
+                                                    content making
+                                                    it look like readable english. </p>
+                                            </div>
+                                            <div class="rs-testimonial-rating-wrapper">
+                                                <div class="rs-rating">
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-fill"></i></span>
+                                                    <span><i class="ri-star-half-line"></i></span>
+                                                </div>
+                                                <div class="rs-testimonial-quote">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="43"
+                                                        viewBox="0 0 60 43" fill="none">
+                                                        <path
+                                                            d="M57.3913 0H33.913C32.4746 0 31.3043 1.14482 31.3043 2.55199V24.2439C31.3043 25.6511 32.4746 26.7959 33.913 26.7959H45V42.1077C45 42.7082 45.805 42.9717 46.1739 42.4907L59.8696 24.6267C59.9542 24.5163 60 24.382 60 24.2439V2.55199C60 1.14482 58.8299 0 57.3913 0ZM58.6957 24.0312L46.3043 40.1939V26.1579C46.3043 25.8055 46.0124 25.5199 45.6522 25.5199H33.913C33.1938 25.5199 32.6087 24.9475 32.6087 24.2439V2.55199C32.6087 1.84841 33.1938 1.276 33.913 1.276H57.3913C58.1105 1.276 58.6957 1.84841 58.6957 2.55199V24.0312ZM26.087 0H2.6087C1.17026 0 0 1.14482 0 2.55199V24.2439C0 25.6511 1.17026 26.7959 2.6087 26.7959H13.6957V42.1079C13.6957 42.7049 14.5004 42.9721 14.8696 42.4907L28.5652 24.6267C28.6499 24.5163 28.6957 24.382 28.6957 24.2439V2.55199C28.6957 1.14482 27.5254 0 26.087 0ZM27.3913 24.0312L15 40.1939V26.1579C15 25.8055 14.708 25.5199 14.3478 25.5199H2.6087C1.88948 25.5199 1.30435 24.9475 1.30435 24.2439V2.55199C1.30435 1.84841 1.88948 1.276 2.6087 1.276H26.087C26.8062 1.276 27.3913 1.84841 27.3913 2.55199V24.0312Z"
+                                                            fill="#1F1F1F"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1093,7 +1158,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- testimonial area end -->
 
@@ -1182,75 +1246,46 @@
         </section>
         <!-- global presence area end -->
 
-          <!-- brand area start -->
-        <section class="rs-brand-area rs-brand-two has-theme-orange">
-            <div class="rs-brand-shape">
-                <img src="assets/images/shape/brand-shape.png" alt="image">
-            </div>
+        <!-- brand area start -->
+        <section class="rs-partners-section">
             <div class="container">
-                <div class="row  align-items-center">
-                    <div class="col-12">
-                        <div class="rs-brand-wrapper">
-                            <div class="rs-section-title-wrapper">
-                                <span class="rs-section-subtitle has-theme-orange justify-content-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15"
-                                        fill="none">
-                                        <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
-                                            fill="#EA5501"></path>
-                                    </svg>
-                                    Partners
-                                </span>
-                                <h2 class="rs-section-title rs-split-text-enable split-in-fade mb-20">Our clients and
-                                    partners </h2>
-                                <p class="descrip"> Trusted by Power & Industrial Companies Worldwide </p>
-                            </div>
-                            <div class="rs-brand-item-wrapper">
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/tata.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/BG-LI-IN.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/KSEB.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/LPH.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/NEA.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/hitech.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/honda.jpg" alt="image">
-                                    </div>
-                                </div>
-                                <div class="rs-brand-item">
-                                    <div class="rs-brand-thumb">
-                                        <img src="assets/images/brand/irctc.jpg" alt="image">
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 text-center">
+                        <span class="rs-section-subtitle has-theme-orange justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none">
+                                <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z"
+                                    fill="#EA5501"></path>
+                            </svg>
+                            Partners
+                        </span>
+                        <h2 class="rs-section-title rs-split-text-enable split-in-fade mb-20">Our clients and partners</h2>
+                        <p class="descrip">Trusted by Power &amp; Industrial Companies Worldwide</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Full-width logo carousel -->
+            <div class="rs-partners-carousel-wrap">
+                <div class="swiper rs-partners-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/tata.jpg" alt="Tata"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/BG-LI-IN.jpg" alt="BG LI-IN"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/KSEB.jpg" alt="KSEB"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/LPH.jpg" alt="LHP"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/NEA.jpg" alt="NEA"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/hitech.jpg" alt="Hitech"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/honda.jpg" alt="Honda"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/irctc.jpg" alt="IRCTC"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/AMBE.jpg" alt="AMBE"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/CDE.jpg" alt="CDE"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/EEC.jpg" alt="EEC"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/FLUX.jpg" alt="FLUX"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/Tata-power.jpg" alt="Tata Power"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/UGCL.jpg" alt="UGCL"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/essex.jpg" alt="Essex"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/NGG.jpg" alt="NGG"></div></div>
+                        <div class="swiper-slide"><div class="rs-partners-logo"><img src="assets/images/brand/ns.jpg" alt="NS"></div></div>
                     </div>
                 </div>
             </div>
@@ -1708,41 +1743,38 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // Brand slider initialization
-        var brandSwiper = new Swiper('.rs-brand-two .rs-brand-item-wrapper', {
-            slidesPerView: 4,
-            spaceBetween: 30,
+        // Partners logo carousel
+        var brandSwiper = new Swiper('.rs-partners-swiper', {
             loop: true,
-            speed: 2000, // smoother continuous feel
+            speed: 3000,
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
-            freeMode: true,
-            freeModeMomentum: false,
-            navigation: {
-                nextEl: '.rs-brand-two .swiper-button-next',
-                prevEl: '.rs-brand-two .swiper-button-prev',
+            freeMode: {
+                enabled: true,
+                momentum: false,
             },
             breakpoints: {
                 320: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
+                    slidesPerView: 2,
+                    spaceBetween: 16
                 },
                 480: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                     spaceBetween: 20
                 },
                 768: {
-                    slidesPerView: 3,
-                    spaceBetween: 25
+                    slidesPerView: 4,
+                    spaceBetween: 24
                 },
                 1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 30
+                    slidesPerView: 5,
+                    spaceBetween: 28
                 },
-                1200: {
-                    slidesPerView: 4,
+                1280: {
+                    slidesPerView: 6,
                     spaceBetween: 30
                 }
             }

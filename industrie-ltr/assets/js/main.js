@@ -197,7 +197,9 @@ Sidebar Toggle
             var hoverAutoplay = $swiper.data('hover-pause') === undefined ? true : $swiper.data('hover-pause');
             var loop = $(this).data('loop') === undefined ? true : $(this).data('loop');
             var centeredSlides = $(this).data('center-mode') === undefined ? false : $(this).data('center-mode');
-            var autoplay = $(this).data('autoplay') === undefined ? true : $(this).data('autoplay');
+            var autoplayRaw = $(this).data('autoplay') === undefined ? true : $(this).data('autoplay');
+            var delay = $(this).data('delay') || 3000;
+            var autoplay = autoplayRaw === true ? { delay: delay, disableOnInteraction: false, pauseOnMouseEnter: hoverAutoplay } : false;
             var dynamicBullets = $(this).data('dots-dynamic') === undefined ? true : $(this).data('dots-dynamic');
             var direction = $(this).data('direction') === 'vertical' ? 'vertical' : 'horizontal';
             var fridgeMovement = $(this).data('play-slide') === undefined ? true : $(this).data('play-slide');
