@@ -29429,6 +29429,7 @@ ol.applications-list li:not(:last-child) {
             overflow: hidden;
             background: #000;
             display: block;
+            position: relative;
         }
 
         .video-thumbnail img {
